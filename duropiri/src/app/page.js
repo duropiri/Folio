@@ -1,3 +1,4 @@
+'page.js'
 import Image from "next/image";
 import { Parallax } from "@/components/Parallax";
 import Hero from "@/components/Hero";
