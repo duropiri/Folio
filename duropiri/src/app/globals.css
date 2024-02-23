@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  font-family: "General Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-light-background; /* Light mode background color */
+  }
+  .dark {
+    @apply bg-dark-background; /* Dark mode background color */
+  }
+}
+
+@layer base {
+  html {
+    @apply text-light-text;
+  }
+  body {
+    @apply text-light-text;
+  }
+  @media (prefers-color-scheme: dark) {
+    html {
+      @apply text-dark-text;
+    }
+
+    body {
+      @apply text-dark-text;
+    }
+  }
+}
+
+/* Your existing customizations */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.blinker {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.font-khand {
+  font-family: "Khand", sans-serif;
+}
+
+.font-generalsans {
+  font-family: "General Sans", sans-serif;
+}
+
+/* .font-outline {
+  -webkit-text-stroke: 4px rgb(200 190 176);
+} */
+
+@layer components {
+  .font-outline {
+    position: relative;
+    color: rgb(78 68 54); /* Your text color */
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: rgb(78 68 54); /* Stroke color */
+  }
+
+  .categories::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(78 68 54));
+    content: "";
+    z-index: 2;
+  }
+  @media (prefers-color-scheme: dark) {
+    .font-outline {
+      position: relative;
+      color: rgb(200 190 176); /* Your text color */
+      -webkit-text-stroke-width: 4px;
+      -webkit-text-stroke-color: rgb(200 190 176); /* Stroke color */
+    }
+  }
+
+  .font-outline::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke-width: 0px;
+    visibility: visible;
+  }
+}
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50; /* Ensure it covers other content */
+}
+
+.loading-message {
+  color: white;
+  font-size: 20px;
+  /* Add more styles as needed */
+}
+
+.infinity-carousel {
+  white-space: nowrap;
+  animation: 30s slide infinite linear;
+}
+/* 
+.infinity-carousel:hover {
+  animation-play-state: paused;
+} */
+
+.categories {
+  overflow: hidden;
+  position: relative;
+}
+
+.categories::before,
+.categories::after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.categories::before {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgb(200 190 176)
+  );
+}
+
+.categories::after {
+  right: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(200 190 176)
+  );
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
