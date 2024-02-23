@@ -3,7 +3,8 @@ import { Parallax } from "@/components/Parallax";
 
 const Hero = () => {
   return (
-    <div className="w-full h-auto py-[150px] flex relative">
+    <div className="w-full h-lvh py-[150px] flex relative mt-[-100px]">
+      {/* Parallax */}
       <Parallax
         speed={3}
         className="flex self-start absolute w-full justify-end pr-0 xl:pr-[12%] "
@@ -69,8 +70,10 @@ const Hero = () => {
           </defs>
         </svg>
       </Parallax>
-      <div className="flex-row z-10">
-        <ul className="font-khand font-bold text-[180px] uppercase leading-[150px] mb-[25px]">
+      {/* Content */}
+      <div className="flex flex-col items-start justify-center z-10">
+        {/* Title */}
+        <ul className="font-khand font-bold text-[128px] lg:text-[180px] uppercase leading-[100px] lg:leading-[150px] mb-[25px]">
           <li className="text-light-primary dark:text-dark-primary">
             <span className="font-outline text-transparent">Duro</span> Piri.
           </li>
@@ -78,7 +81,8 @@ const Hero = () => {
             Duro <span className="font-outline text-transparent">Piri.</span>
           </li>
         </ul>
-        <p className="font-medium text-[32px] text-light-primary dark:text-dark-primary leading-snug">
+        {/* Description */}
+        <p className="font-medium text-[16px] lg:text-[32px] text-light-primary dark:text-dark-primary leading-snug">
           A Full Stack Developer & Marketing Specialist helping business
           <br />
           owners leverage proven, results-driven systems.

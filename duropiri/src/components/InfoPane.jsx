@@ -121,7 +121,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                   </li>
 
                   <li>
-                    <span className="text-[24px]">Calgary, Alberta</span>
+                    <span className="text-[16px] lg:text-[24px]">Calgary, Alberta</span>
                   </li>
                 </ul>
                 <div className="bg-dark-primary h-full w-[1px] mx-[2px]"></div>
@@ -130,7 +130,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                     <span>Local Time</span>
                   </li>
                   <li>
-                    <span className="text-[24px]">
+                    <span className="text-[16px] lg:text-[24px]">
                       <CurrentTime /> GMT-7
                     </span>
                   </li>
@@ -140,7 +140,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                   <li>
                     <span>Current Status</span>
                   </li>
-                  <li className="text-[24px]">
+                  <li className="text-[16px] lg:text-[24px]">
                     <span class="blinker w-3 h-3 bg-[#4cd137] inline-block rounded-full mr-3 mb-1"></span>
                     <span>Available</span>
                   </li>
@@ -149,7 +149,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                 <ul className="flex flex-row items-center">
                   <li>
                     <span>
-                      <span className="text-[24px]">duro.dp02</span>@gmail.com
+                      <span className="text-[16px] lg:text-[24px]">duro.dp02</span>@gmail.com
                     </span>
                   </li>
                 </ul>
@@ -160,7 +160,7 @@ const InfoPane = ({ all, dropdown, time }) => {
       )}
       {time && (
         <>
-          <div className="info-panel flex w-full items-center h-full text-[32px] text-start text-light-primary dark:text-dark-primary">
+          <div className="info-panel flex w-full items-center h-full text-[16px] lg:text-[32px] text-start text-light-primary dark:text-dark-primary">
             <div className="flex w-full justify-between">
               <ul className="leading-snug">
                 <li>

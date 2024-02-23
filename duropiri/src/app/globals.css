@@ -7,6 +7,29 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+@layer base {
+  
+  :root {
+    /* Default for light mode */
+    --transparent: rgb(0, 0, 0, 0);
+    --text: #181716;
+    --background: #f6f5f4;
+    --primary: #4e4436;
+    --secondary: #bcac94;
+    --accent: #917650;
+  }
+
+  body.dark {
+    /* Color for dark mode */
+    --transparent: rgb(0, 0, 0, 0);
+    --text: #e9e8e6;
+    --background: #0a0908;
+    --primary: #c8beb0;
+    --secondary: #6b5b43;
+    --accent: #b0956f;
+  }
+}
+
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -69,34 +92,20 @@ body {
   font-family: "General Sans", sans-serif;
 }
 
-/* .font-outline {
-  -webkit-text-stroke: 4px rgb(200 190 176);
-} */
-
 @layer components {
   .font-outline {
     position: relative;
-    color: rgb(78 68 54); /* Your text color */
+    color: var(--primary); /* Your text color */
     -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: rgb(78 68 54); /* Stroke color */
+    -webkit-text-stroke-color: var(--primary); /* Stroke color */
   }
 
-  .categories::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(78 68 54));
-    content: "";
-    z-index: 2;
-  }
   @media (prefers-color-scheme: dark) {
     .font-outline {
       position: relative;
-      color: rgb(200 190 176); /* Your text color */
+      color: var(--primary); /* Your text color */
       -webkit-text-stroke-width: 4px;
-      -webkit-text-stroke-color: rgb(200 190 176); /* Stroke color */
+      -webkit-text-stroke-color: var(--primary); /* Stroke color */
     }
   }
 
@@ -146,7 +155,7 @@ body {
 .categories::after {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 200px;
   height: 100%;
   content: "";
   z-index: 2;
@@ -154,20 +163,12 @@ body {
 
 .categories::before {
   left: 0;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0),
-    rgb(200 190 176)
-  );
+  background: linear-gradient(to left, var(--transparent), var(--primary));
 }
 
 .categories::after {
   right: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgb(200 190 176)
-  );
+  background: linear-gradient(to right, var(--transparent), var(--primary));
 }
 
 @keyframes slide {

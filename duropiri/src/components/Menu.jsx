@@ -11,7 +11,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="relative flex">
+    <div className="relative flex w-full">
       <div
         className="flex w-[84px] h-[100px] justify-center items-center cursor-pointer"
         onClick={toggleDropdown}
@@ -31,13 +31,13 @@ const Menu = () => {
         </svg>
       </div>
       {isDropdownVisible && (
-        <>
+        <div className="w-full">
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-10"
+            className="fixed lg:inset-0 bg-black bg-opacity-50 z-10"
             onClick={toggleDropdown}
           ></div>
           <MenuDropdown onClose={toggleDropdown}/>
-        </>
+        </div>
       )}
     </div>
   );

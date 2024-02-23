@@ -26,10 +26,11 @@ const Body = () => {
       {/* About Me Section */}
       <div className="relative w-full">
         <div className="flex justify-start z-10">
-          <span className="uppercase font-khand text-[112px] font-semibold text-light-background dark:text-dark-background">
+          <span className="uppercase font-khand text-[64px] lg:text-[112px] font-semibold text-light-background dark:text-dark-background">
             About Me.
           </span>
         </div>
+
 
         <div className="flex ml-[22%] absolute">
           <svg
@@ -38,14 +39,15 @@ const Body = () => {
             viewBox="0 0 305 150"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="text-light-secondary dark:text-dark-secondary"
           >
             <path
               d="M87.4999 150L0.897453 -4.006e-06L174.103 -2.87618e-07L87.4999 150Z"
-              fill="#6B5B43"
+              fill="currentColor"
             />
             <path
               d="M217.5 150L130.898 -4.006e-06L304.103 -2.87618e-07L217.5 150Z"
-              fill="#6B5B43"
+              fill="currentColor"
             />
           </svg>
         </div>
@@ -56,7 +58,7 @@ const Body = () => {
         >
           <div className="w-[533px] h-[650px] bg-light-background dark:bg-dark-accent"></div>
         </Parallax>
-        <p className="indent-4 text-[32px] font-medium items-end flex justify-end relative -mt-8 sm:-mt-12 leading-snug text-light-background dark:text-dark-background">
+        <p className="indent-4 text-[16px] lg:text-[32px] font-medium items-end flex justify-end relative -mt-8 sm:-mt-12 leading-snug text-light-background dark:text-dark-background">
           Empowering all-scale startups with custom web experiences that are
           memorable and drive success. With a passion for design and
           development, I take projects from ideation to launch, ensuring a
@@ -70,11 +72,11 @@ const Body = () => {
         <div className="flex flex-col justify-start gap-[50px] xl:gap-[100px] z-10">
           <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[25px]">
             <div className="flex flex-col w-full xl:w-1/2">
-              <span className="uppercase font-khand text-[112px] font-semibold text-light-background dark:text-dark-background">
+              <span className="uppercase font-khand text-[64px] lg:text-[112px] font-semibold text-light-background dark:text-dark-background">
                 What I Do.
               </span>
 
-              <p className="text-[32px] font-medium flex relative leading-snug text-light-background dark:text-dark-background w-full">
+              <p className="text-[16px] lg:text-[32px] font-medium flex relative leading-snug text-light-background dark:text-dark-background w-full">
                 My obsession is to deliver a digital experience that not only
                 serves a great purpose, but give your business an unfair
                 advantage.
@@ -85,37 +87,37 @@ const Body = () => {
             <div className="flex flex-col w-full xl:w-1/2">
               <ul className="flex flex-col gap-[20px]">
                 <li className="flex justify-between">
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     Web Development
                   </span>
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     +
                   </span>
                 </li>
                 <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
                 <li className="flex justify-between">
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     Web Design
                   </span>
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     +
                   </span>
                 </li>
                 <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
                 <li className="flex justify-between">
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     SEO & Marketing
                   </span>
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     +
                   </span>
                 </li>
                 <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
                 <li className="flex justify-between">
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     Audio Engineering
                   </span>
-                  <span className="text-[56px] font-medium text-light-background dark:text-dark-background">
+                  <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                     +
                   </span>
                 </li>
@@ -123,7 +125,7 @@ const Body = () => {
             </div>
           </div>
           <div className="flex flex-col w-full">
-            <span className="flex uppercase font-khand text-[64px] font-semibold text-light-background dark:text-dark-background justify-center">
+            <span className="flex uppercase font-khand text-[32px] lg:text-[64px] font-semibold text-light-background dark:text-dark-background justify-center">
               Tech Stack.
             </span>
 
@@ -141,7 +143,7 @@ const Body = () => {
       {/* Selected Works */}
       <div className="relative w-full">
         <div className="flex flex-col justify-start z-10 gap-[10px] xl:gap-[50px]">
-          <span className="uppercase font-khand text-[112px] font-semibold text-light-background dark:text-dark-background">
+          <span className="uppercase font-khand text-[64px] lg:text-[112px] font-semibold text-light-background dark:text-dark-background">
             Selected Works.
           </span>
 
@@ -156,7 +158,7 @@ const Body = () => {
               <div className="w-fill h-[200px] bg-light-accent dark:bg-dark-accent"></div>
               <div className="w-fill h-[200px] bg-light-accent dark:bg-dark-accent"></div>
             </div>
-            <p className="text-[32px] font-medium flex relative leading-snug text-light-background dark:text-dark-background w-full xl:w-1/2">
+            <p className="text-[16px] lg:text-[32px] font-medium flex relative leading-snug text-light-background dark:text-dark-background w-full xl:w-1/2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

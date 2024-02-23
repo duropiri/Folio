@@ -18,13 +18,11 @@ export default function RootLayout({ children }) {
         <body className="dark">
           <div className="flex flex-col">
             <SmoothScrolling>
-              <div className="z-50 px-[25px] lg:px-[50px]">
+              <div className=" z-50">
                 <Navbar />
               </div>
               <div>{children}</div>
-              <div className="z-50 px-[25px] lg:px-[50px]">
-                <Footer />
-              </div>
+              
             </SmoothScrolling>
           </div>
         </body>

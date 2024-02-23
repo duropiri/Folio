@@ -5,10 +5,10 @@ import InfoPane from "./InfoPane";
 
 const MenuDropdown = ({ onClose }) => {
   return (
-    <div className="bg-light-background top-[0px] right-0 dark:bg-dark-background absolute w-[847px] h-[606px] p-[20px] z-20 shadow-lg rounded-[25px] flex flex-col justify-between">
+    <div className="bg-light-background top-[0px] right-0 dark:bg-dark-background absolute w-screen lg:w-[847px] h-screen lg:h-[606px] mx-[-25px] p-[20px] z-20 shadow-lg lg:rounded-[25px] flex flex-col justify-between">
       <div className="flex w-full h-[64px] justify-end items-center">
         {/* Info Panel */}
-        <div className="w-full">
+        <div className="w-full hidden sm:inline-block">
           <InfoPane all={true} dropdown={true} />
         </div>
         {/* Menu Close */}
@@ -54,8 +54,8 @@ const MenuDropdown = ({ onClose }) => {
         </ul>
       </div>
       {/* Social Media SVGs */}
-      <div className="flex w-full h-[32px]">
-        <ul className="flex flex-row justify-end h-5 items-start gap-[25px]">
+      <div className="flex flex-col w-full h-[32px]">
+        <ul className="flex flex-row justify-end sm:justify-start h-full items-start gap-[25px]">
           <li>
             <svg
               width="32"
