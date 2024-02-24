@@ -5,25 +5,29 @@ import Image from "next/image";
 const ImageList = () => {
   return (
     <>
-      <Parallax speed={1} className="self-start">
-        <Image
-          src={"https://picsum.photos/600/400?random=1"}
-          alt="Image"
-          width={600}
-          height={400}
-          priority
-          sizes="50vw"
-        />
+      <Parallax>
+        <div data-speed="2" className="self-start">
+          <Image
+            src={"https://picsum.photos/600/400?random=1"}
+            alt="Image"
+            width={600}
+            height={400}
+            priority
+            sizes="50vw"
+          />
+        </div>
       </Parallax>
-      <Parallax speed={-2} className="self-end overflow-hidden">
-        <Image
-          src={"https://picsum.photos/600/400?random=2"}
-          alt="Image"
-          width={600}
-          height={400}
-          priority
-          sizes="50vw"
-        />
+      <Parallax>
+        <div data-speed="-2" className="self-end overflow-hidden">
+          <Image
+            src={"https://picsum.photos/600/400?random=2"}
+            alt="Image"
+            width={600}
+            height={400}
+            priority
+            sizes="50vw"
+          />
+        </div>
       </Parallax>
       <Image
         src={"https://picsum.photos/600/400?random=1"}

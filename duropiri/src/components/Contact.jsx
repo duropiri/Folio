@@ -1,11 +1,12 @@
+"use client"
 import React from "react";
 import Footer from "./Footer";
 import { Parallax } from "./Parallax";
 
 const Contact = () => {
   return (
-    <Parallax speed={2} className="mt-[-98px]">
-      <div className="flex flex-col h-lvh justify-between">
+    <Parallax >
+      <div id="contact" className="flex flex-col h-lvh justify-start">
         {/* What I Do Section */}
         <div className="relative w-full py-[25px] xl:py-[50px]">
           <div className="flex flex-col justify-start gap-[50px] xl:gap-[100px] z-10">
@@ -31,19 +32,54 @@ const Contact = () => {
                       <div className="w-full h-[2px] bg-light-primary dark:bg-dark-primary"></div>
                       {/* Navigation */}
                       <ul className="flex flex-col gap-[8px]">
-                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                        <li
+                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
+                          onClick={() =>
+                            document
+                              .getElementById("home")
+                              .scrollIntoView({ behavior: "smooth" })
+                          }
+                        >
                           Home
                         </li>
-                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                        <li
+                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
+                          onClick={() =>
+                            document
+                              .getElementById("aboutMe")
+                              .scrollIntoView({ behavior: "smooth" })
+                          }
+                        >
                           About
                         </li>
-                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                        <li
+                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
+                          onClick={() =>
+                            document
+                              .getElementById("services")
+                              .scrollIntoView({ behavior: "smooth" })
+                          }
+                        >
                           Services
                         </li>
-                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                        <li
+                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
+                          onClick={() =>
+                            document
+                              .getElementById("works")
+                              .scrollIntoView({ behavior: "smooth" })
+                          }
+                        >
                           Works
                         </li>
-                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                        <li
+                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
+                          onClick={() =>
+                            document
+                              .getElementById("contact")
+                              .scrollIntoView({ behavior: "smooth" })
+                          }
+                        >
                           Contact
                         </li>
                       </ul>

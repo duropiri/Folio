@@ -7,38 +7,34 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export function Parallax({ className, children, speed = 1, id = "parallax" }) {
   const trigger = useRef();
   const target = useRef();
-  const { height: windowHeight, width: windowWidth } = useWindowSize();
+  const timeline = useRef();
+  const { width: windowWidth } = useWindowSize();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Calculate the vertical movement based on window width or speed adjustment if necessary
     const y = windowWidth * speed * 0.1;
-
-    // Adjust the end value based on content height to ensure the effect doesn't stop early
-    const contentHeight = target.current.offsetHeight;
-    const endValue = `bottom+=${contentHeight} top`;
-
     const setY = gsap.quickSetter(target.current, "y", "px");
 
-    const timeline = gsap.timeline({
+    timeline.current = gsap.timeline({
       scrollTrigger: {
         id: id,
         trigger: trigger.current,
         scrub: true,
         start: "top bottom",
-        end: endValue,
-        markers: false, // You can remove this line after debugging
-        onUpdate: (self) => {
-          setY(self.progress * y);
+        end: "bottom+=200 top",
+        markers: true, // Add this line for debugging
+        onUpdate: (e) => {
+          setY(e.progress * y);
         },
       },
     });
+    
 
     return () => {
-      timeline.kill();
+      timeline?.current?.kill();
     };
-  }, [id, speed, windowHeight, windowWidth]);
+  }, [id, speed, windowWidth]);
 
   return (
     <div ref={trigger} className={className}>

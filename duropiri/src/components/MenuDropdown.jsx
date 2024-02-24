@@ -36,23 +36,64 @@ const MenuDropdown = ({ onClose }) => {
       {/* Navigation */}
       <div className="flex w-full h-[410px] justify-end items-center px-[64px]">
         <ul className="flex flex-col items-end text-[64px]">
-          <li className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px]">
+          <li
+            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            onClick={() => {
+              document
+                .getElementById("home")
+                .scrollIntoView({ behavior: "smooth" });
+              onClose(); // Make sure onClose is called as a function
+            }}
+          >
             Home
           </li>
-          <li className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px]">
+          <li
+            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            onClick={() => {
+              document
+                .getElementById("aboutMe")
+                .scrollIntoView({ behavior: "smooth" });
+              onClose(); // Make sure onClose is called as a function
+            }}
+          >
             About
           </li>
-          <li className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px]">
+          <li
+            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            onClick={() => {
+              document
+                .getElementById("services")
+                .scrollIntoView({ behavior: "smooth" });
+              onClose(); // Make sure onClose is called as a function
+            }}
+          >
             Services
           </li>
-          <li className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px]">
+          <li
+            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            onClick={() => {
+              document
+                .getElementById("works")
+                .scrollIntoView({ behavior: "smooth" });
+              onClose(); // Make sure onClose is called as a function
+            }}
+          >
             Works
           </li>
-          <li className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px]">
+          <li
+            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            onClick={() => {
+              document
+                .getElementById("contact")
+                .scrollIntoView({ behavior: "smooth" });
+              onClose(); // Make sure onClose is called as a function
+            }}
+          >
             Contact
           </li>
         </ul>
       </div>
+
       {/* Social Media SVGs */}
       <div className="flex flex-col w-full h-[32px]">
         <ul className="flex flex-row justify-end sm:justify-start h-full items-start gap-[25px]">
