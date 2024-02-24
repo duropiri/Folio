@@ -8,25 +8,44 @@ html::-webkit-scrollbar {
 }
 
 @layer base {
-  
-  :root {
-    /* Default for light mode */
+  /* Default for light mode */
+  /* :root {
     --transparent: rgb(0, 0, 0, 0);
     --text: #181716;
     --background: #f6f5f4;
     --primary: #4e4436;
     --secondary: #bcac94;
     --accent: #917650;
-  }
+  } */
 
-  body.dark {
-    /* Color for dark mode */
+  /* Color for dark mode */
+  /* body.dark {
     --transparent: rgb(0, 0, 0, 0);
     --text: #e9e8e6;
     --background: #0a0908;
     --primary: #c8beb0;
     --secondary: #6b5b43;
     --accent: #b0956f;
+  } */
+
+  /* Default for light mode */
+  :root {
+    --transparent: rgb(0, 0, 0, 0);
+    --text: #0e1011;
+    --background: #f5f7f9;
+    --primary: #2b4154;
+    --secondary: #8cb0cf;
+    --accent: #3774a9;
+  }
+
+  body.dark {
+    /* Color for dark mode */
+    --transparent: rgb(0, 0, 0, 0);
+    --text: #eef0f1;
+    --background: #06080a;
+    --primary: #aac0d3;
+    --secondary: #315574;
+    --accent: #5793c8;
   }
 }
 

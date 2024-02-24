@@ -4,6 +4,8 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeContext";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export const metadata = {
   title:
@@ -17,17 +19,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="dark">
-        <div className="flex flex-col">
-          <SmoothScrolling>
-            <div className=" z-50">
-              <Navbar />
-            </div>
-            <div>{children}</div>
-          </SmoothScrolling>
-        </div>
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <body className="dark">
+          <div className="flex flex-col">
+            <SmoothScrolling>
+              <div className=" z-50">
+                <Navbar />
+              </div>
+              <div>{children}</div>
+            </SmoothScrolling>
+          </div>
+          <div className="absolute z-50">
+            <ThemeToggle />{" "}
+          </div>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }

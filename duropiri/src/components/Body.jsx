@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import React from "react";
 import ScrollArrow from "./ScrollArrow";
 import AboutMe from "./AboutMe";
-import WhatIDo from "./WhatIDo";
+import WhatIDo from "./Services";
 import Works from "./Works";
 
 const Body = () => {
@@ -10,6 +10,7 @@ const Body = () => {
     <div className="flex flex-col w-full justify-center items-center bg-light-primary dark:bg-dark-primary z-10 py-[50px] px-[25px] lg:px-[50px] xl:px-[150px] gap-[50px] rounded-[20px] mt-[-128px]">
       {/* Arrow to About Me */}
       <div
+        className="cursor-pointer"
         onClick={() =>
           document
             .getElementById("aboutMe")
@@ -25,7 +26,7 @@ const Body = () => {
       >
         <AboutMe />
         {/* Arrow to What I Do */}
-        <div
+        {/* <div
           onClick={() =>
             document
               .getElementById("services")
@@ -33,7 +34,7 @@ const Body = () => {
           }
         >
           <ScrollArrow />
-        </div>
+        </div> */}
       </div>
       {/* What I Do Section */}
       <div
@@ -42,7 +43,7 @@ const Body = () => {
       >
         <WhatIDo />
         {/* Arrow to Works */}
-        <div
+        {/* <div
           onClick={() =>
             document
               .getElementById("works")
@@ -50,7 +51,7 @@ const Body = () => {
           }
         >
           <ScrollArrow />
-        </div>
+        </div> */}
       </div>
       {/* Selected Works */}
       <div
