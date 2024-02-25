@@ -1,48 +1,58 @@
 "use client";
 import { gsap } from "gsap";
-import { useEffect, useRef, useState } from "react";
-import { useWindowSize } from "@studio-freight/hamo";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function Parallax({ className, children, speed = 1, id = "parallax" }) {
   const trigger = useRef();
   const target = useRef();
-  const { height: windowHeight, width: windowWidth } = useWindowSize();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Calculate the vertical movement based on window width or speed adjustment if necessary
-    const y = windowWidth * speed * 0.1;
+    const updateParallax = () => {
+      const windowHeight = window.innerHeight;
+      const y = windowHeight * speed * 0.1;
+      const setY = gsap.quickSetter(target.current, "y", "px");
 
-    // Adjust the end value based on content height to ensure the effect doesn't stop early
-    const contentHeight = target.current.offsetHeight;
-    const endValue = `bottom+=${contentHeight} top`;
+      const recalculateStart = () => {
+        const elementTop = trigger.current.getBoundingClientRect().top;
+        const viewportHeight = window.innerHeight;
+        const initialVisibilityOffset = elementTop - viewportHeight;
+        return initialVisibilityOffset < 0 ? `top+=${Math.abs(initialVisibilityOffset)} bottom` : "top bottom";
+      };
 
-    const setY = gsap.quickSetter(target.current, "y", "px");
-
-    const timeline = gsap.timeline({
-      scrollTrigger: {
+      ScrollTrigger.create({
         id: id,
         trigger: trigger.current,
+        start: recalculateStart(),
+        end: "bottom top",
         scrub: true,
-        start: "top bottom",
-        end: endValue,
-        markers: false, // You can remove this line after debugging
+        markers: false, // Useful for debugging
         onUpdate: (self) => {
-          setY(self.progress * y);
+          const yPos = self.progress * y;
+          setY(yPos);
         },
-      },
-    });
+        onRefresh: (self) => self.update({ // Listen for resize events and update start position
+          start: recalculateStart(),
+          end: "bottom top",
+        }),
+      });
+    };
+
+    updateParallax(); // Initial setup
+
+    ScrollTrigger.addEventListener("refreshInit", updateParallax); // Reinitialize on resize
 
     return () => {
-      timeline.kill();
+      ScrollTrigger.getById(id)?.kill();
+      ScrollTrigger.removeEventListener("refreshInit", updateParallax); // Cleanup
     };
-  }, [id, speed, windowHeight, windowWidth]);
+  }, [speed, id]);
 
   return (
     <div ref={trigger} className={className}>
-      <div ref={target}>{children}</div>
+      <div ref={target} className={className}>{children}</div>
     </div>
   );
 }

@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
   display: none;
-}
+} */
 
 @layer base {
+
   /* Default for light mode */
   /* :root {
     --transparent: rgb(0, 0, 0, 0);
@@ -198,3 +199,81 @@ body {
     transform: translateX(-100%);
   }
 }
+
+.section-padding {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100lvh;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.custom-height {
+  min-height: calc(100vh - 102px);
+  height: calc(100vh - 102px);
+}
+
+.no-padding-y {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-padding {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+.header-text {
+  transform: translateY(0px) translateZ(0px);
+}
+
+.section-heading {
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .section-heading {
+    font-size: 112px;
+  }
+}
+
+.section-subheading {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .section-subheading {
+    font-size: 32px;
+  }
+}
+
+.body-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+  text-wrap: balance;
+}
+
+@media (min-width: 1024px) {
+  .body-text {
+    font-size: 32px;
+  }
+}
+
+

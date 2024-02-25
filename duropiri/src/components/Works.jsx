@@ -4,9 +4,15 @@ const Works = () => {
   return (
     <div className="relative w-full h-full">
       <div className="flex flex-col justify-start z-10 gap-[10px] xl:gap-[50px]">
-        <span className="uppercase font-khand text-[64px] lg:text-[112px] font-semibold text-light-background dark:text-dark-background">
-          Selected Works.
-        </span>
+        <h2 className="relative font-khand section-heading text-light-background dark:text-dark-background">
+          <span aria-hidden="true">
+            <span class=" inline-block">
+              <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                <span className="header-text">Selected Works.</span>
+              </span>
+            </span>
+          </span>
+        </h2>
 
         <div className="flex flex-col xl:flex-row gap-[10px]">
           <div className="w-full xl:w-1/3 h-[250px] xl:h-[500px] bg-light-background dark:bg-dark-background"></div>
@@ -19,13 +25,16 @@ const Works = () => {
             <div className="w-fill h-[200px] bg-light-accent dark:bg-dark-accent"></div>
             <div className="w-fill h-[200px] bg-light-accent dark:bg-dark-accent"></div>
           </div>
-          <p className="text-[16px] lg:text-[32px] font-medium flex relative leading-snug text-light-background dark:text-dark-background w-full xl:w-1/2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+
+          <p className="body-text items-start flex justify-start w-full relative text-light-background dark:text-dark-background">
+            <span aria-hidden="true">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </span>
           </p>
         </div>
       </div>

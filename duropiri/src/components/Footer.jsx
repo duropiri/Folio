@@ -1,5 +1,5 @@
 // components/Footer.jsx
-
+"use client"
 import InfoPane from "./InfoPane";
 
 const Footer = () => {

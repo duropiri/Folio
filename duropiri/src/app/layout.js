@@ -6,6 +6,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeContext";
 import ThemeToggle from "@/components/ThemeToggle";
+import { Parallax } from "@/components/Parallax";
+import Contact from "@/components/Contact";
 
 export const metadata = {
   title:
@@ -24,10 +26,8 @@ export default function RootLayout({ children }) {
         <body className="dark">
           <div className="flex flex-col">
             <SmoothScrolling>
-              <div className=" z-50">
-                <Navbar />
-              </div>
-              <div>{children}</div>
+              {children}
+              
             </SmoothScrolling>
           </div>
           <div className="absolute z-50">

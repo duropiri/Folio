@@ -1,34 +1,47 @@
-"use client"
+"use client";
 import React from "react";
 import Footer from "./Footer";
 import { Parallax } from "./Parallax";
 
 const Contact = () => {
   return (
-    <Parallax >
-      <div id="contact" className="flex flex-col h-lvh justify-start">
-        {/* What I Do Section */}
+    <>
+      {/* Get In Touch Section */}
+      <div className="">
         <div className="relative w-full py-[25px] xl:py-[50px]">
           <div className="flex flex-col justify-start gap-[50px] xl:gap-[100px] z-10">
             <div className="flex flex-col gap-[8px]">
-              <div>
-                <span className="uppercase font-khand text-[64px] lg:text-[112px] font-semibold text-light-primary dark:text-dark-primary leading-snug">
-                  Get In Touch.
+              <h2 className="relative font-khand section-heading text-light-primary dark:text-dark-primary">
+                <span aria-hidden="true">
+                  <span class=" inline-block">
+                    <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                      <span className="header-text">Get In Touch.</span>
+                    </span>
+                  </span>
                 </span>
-              </div>
+              </h2>
               <div className="flex flex-col xl:flex-row w-full gap-[20px]">
                 <div className="flex flex-col w-full xl:w-1/2 gap-[30px]">
-                  <p className="text-[16px] lg:text-[32px] font-medium flex relative leading-snug text-light-primary dark:text-dark-primary w-full">
-                    I am looking for freelance opportunities or internships in
-                    startups, agencies, and design studios.
+                  <p className="body-text items-start flex justify-start w-full relative text-light-primary dark:text-dark-primary">
+                    <span aria-hidden="true">
+                      I am looking for freelance opportunities or internships in
+                      startups, agencies, and design studios.
+                    </span>
                   </p>
 
+                  {/* Links */}
                   <div className="flex flex-row w-full gap-[30px]">
                     {/* Navigation */}
                     <div className="flex flex-col gap-[10px] w-1/2">
-                      <span className="uppercase font-khand text-[24px] lg:text-[32px] font-semibold text-light-primary dark:text-dark-primary">
-                        Navigation.
-                      </span>
+                      <h3 className="relative font-khand section-subheading text-light-primary dark:text-dark-primary">
+                        <span aria-hidden="true">
+                          <span class=" inline-block">
+                            <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                              <span className="header-text">Navigation.</span>
+                            </span>
+                          </span>
+                        </span>
+                      </h3>
                       <div className="w-full h-[2px] bg-light-primary dark:bg-dark-primary"></div>
                       {/* Navigation */}
                       <ul className="flex flex-col gap-[8px]">
@@ -86,9 +99,15 @@ const Contact = () => {
                     </div>
                     {/* Socials */}
                     <div className="flex flex-col gap-[10px] w-1/2">
-                      <span className="uppercase font-khand text-[24px] lg:text-[32px] font-semibold text-light-primary dark:text-dark-primary">
-                        Socials.
-                      </span>
+                      <h3 className="relative font-khand section-subheading text-light-primary dark:text-dark-primary">
+                        <span aria-hidden="true">
+                          <span class=" inline-block">
+                            <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                              <span className="header-text">Socials.</span>
+                            </span>
+                          </span>
+                        </span>
+                      </h3>
                       <div className="w-full h-[2px] bg-light-primary dark:bg-dark-primary"></div>
                       {/* Socials */}
                       <ul className="flex flex-col gap-[8px]">
@@ -192,11 +211,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="z-50">
-          <Footer />
-        </div>
       </div>
-    </Parallax>
+      <div className="z-50">
+        <Footer />
+      </div>
+    </>
   );
 };
 

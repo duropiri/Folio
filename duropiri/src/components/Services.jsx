@@ -35,19 +35,27 @@ const WhatIDo = () => {
         <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[25px]">
           {/* Title & Description */}
           <div className="flex flex-col w-full xl:w-1/2">
-            <span className="uppercase font-khand text-[64px] lg:text-[112px] font-semibold text-light-background dark:text-dark-background">
-              What I Do.
-            </span>
+            <h2 className="relative font-khand section-heading text-light-background dark:text-dark-background">
+              <span aria-hidden="true">
+                <span class=" inline-block">
+                  <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                    <span className="header-text">What I Do.</span>
+                  </span>
+                </span>
+              </span>
+            </h2>
 
-            <p className="text-[16px] lg:text-[32px] font-medium flex relative leading-snug text-light-background dark:text-dark-background w-full">
-              My obsession is to deliver a digital experience that not only
-              serves a great purpose, but give your business an unfair
-              advantage.
+            <p className="body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
+              <span aria-hidden="true">
+                My obsession is to deliver a digital experience that not only
+                serves a great purpose, but give your business an unfair
+                advantage.
+              </span>
             </p>
           </div>
 
           {/* Accordion */}
-          <div className="flex flex-col w-full xl:w-1/2">
+          <div className="flex flex-col w-full xl:w-1/2 py-[25px]">
             <ul className="flex flex-col gap-[20px]">
               <li className="flex justify-between">
                 <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
@@ -89,9 +97,17 @@ const WhatIDo = () => {
         </div>
         {/* Tech Stack */}
         <div className="flex flex-col w-full">
-          <span className="flex uppercase font-khand text-[32px] lg:text-[64px] font-semibold text-light-background dark:text-dark-background justify-center">
-            Tech Stack.
-          </span>
+          <div className="flex justify-center">
+            <h3 className="relative font-khand section-subheading text-light-background dark:text-dark-background">
+              <span aria-hidden="true">
+                <span class=" inline-block">
+                  <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                    <span className="header-text">Tech Stack.</span>
+                  </span>
+                </span>
+              </span>
+            </h3>
+          </div>
 
           <div
             id="categories"

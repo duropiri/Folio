@@ -3,15 +3,20 @@ import { Parallax } from "@/components/Parallax";
 
 const AboutMe = () => {
   return (
-    <div className="relative w-full h-full">
-      {/* Title */}
-      <div className="flex justify-start z-10">
-        <span className="uppercase font-khand text-[64px] lg:text-[112px] font-semibold text-light-background dark:text-dark-background">
-          About Me.
-        </span>
-      </div>
+    <>
+      <div className="relative">
+        {/* Title */}
 
-      <div>
+        <h2 className="relative font-khand section-heading text-light-background dark:text-dark-background mb-[-10%]">
+          <span aria-hidden="true">
+            <span class=" inline-block">
+              <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                <span className="header-text">About Me.</span>
+              </span>
+            </span>
+          </span>
+        </h2>
+
         {/* Decoration */}
         {/* <div className="overflow-hidden ml-[11%] absolute bottom-[150px] z-0">
           
@@ -35,19 +40,17 @@ const AboutMe = () => {
         </div> */}
 
         {/* Parallax */}
-        <Parallax>
-          <div className=" z-0 max-w-sm 2xl:max-w-lg 3xl:max-w-xl relative mt-[-lvh*0.1] mx-auto pointer-events-none">
-            <div className=" absolute w-[200%] h-full mt-[1%] ml-[-1%] bg-gradient-to-t from-light-primary dark:from-dark-primary via-transparent dark:via-transparent via-30%"/>
-            <div
-              data-speed="2"
-              className="w-[533px] h-[650px] bg-light-background dark:bg-dark-background"
-            ></div>
-          </div>
+        <Parallax
+          speed={3}
+          className="flex justify-center z-0 max-w-sm 2xl:max-w-lg 3xl:max-w-xl relative mx-auto pointer-events-none "
+        >
+          <div className=" absolute w-[200%] h-full mt-[10%] bg-gradient-to-t from-light-primary dark:from-dark-primary via-transparent dark:via-transparent via-60%" />
+          <div className="w-[500px] h-[650px] bg-light-background dark:bg-dark-background"></div>
         </Parallax>
       </div>
       {/* Bio */}
-      <p className="indent-4 sm:indent-12 text-[16px] lg:text-[32px] font-medium items-end flex justify-end relative -mt-8 sm:-mt-12 leading-snug text-light-background dark:text-dark-background">
-        <span className="max-w-[43ch]">
+      <p className="body-text items-end flex justify-end w-full relative -mt-8 sm:-mt-12 text-light-background dark:text-dark-background">
+        <span aria-hidden="true" className="max-w-[43ch]">
           Empowering all-scale startups with custom web experiences that are
           memorable and drive success. With a passion for design and
           development, I take projects from ideation to launch, ensuring a
@@ -55,7 +58,7 @@ const AboutMe = () => {
           landscape.
         </span>
       </p>
-    </div>
+    </>
   );
 };
 

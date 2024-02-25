@@ -4,13 +4,14 @@ import ScrollArrow from "./ScrollArrow";
 import AboutMe from "./AboutMe";
 import WhatIDo from "./Services";
 import Works from "./Works";
+import { Parallax } from "./Parallax";
 
 const Body = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center bg-light-primary dark:bg-dark-primary z-10 py-[50px] px-[25px] lg:px-[50px] xl:px-[150px] gap-[50px] rounded-[20px] mt-[-128px]">
+    <div className="relative rounded-[20px] overflow-x-clip w-full min-h-screen z-20">
       {/* Arrow to About Me */}
       <div
-        className="cursor-pointer"
+        className="cursor-pointer hidden"
         onClick={() =>
           document
             .getElementById("aboutMe")
@@ -20,9 +21,9 @@ const Body = () => {
         <ScrollArrow />
       </div>
       {/* About Me Section */}
-      <div
+      <section
         id="aboutMe"
-        className="flex flex-col w-full min-h-lvh justify-between pb-[50px]"
+        className="bg-light-primary dark:bg-dark-primary section-padding"
       >
         <AboutMe />
         {/* Arrow to What I Do */}
@@ -35,11 +36,11 @@ const Body = () => {
         >
           <ScrollArrow />
         </div> */}
-      </div>
+      </section>
       {/* What I Do Section */}
-      <div
+      <section
         id="services"
-        className="flex flex-col w-full min-h-lvh justify-between pb-[50px]"
+        className="bg-light-primary dark:bg-dark-primary section-padding"
       >
         <WhatIDo />
         {/* Arrow to Works */}
@@ -52,14 +53,14 @@ const Body = () => {
         >
           <ScrollArrow />
         </div> */}
-      </div>
+      </section>
       {/* Selected Works */}
-      <div
+      <section
         id="works"
-        className="flex flex-col w-full min-h-lvh justify-between pb-[50px]"
+        className="bg-light-primary dark:bg-dark-primary section-padding"
       >
         <Works />
-      </div>
+      </section>
     </div>
   );
 };
