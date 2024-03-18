@@ -8,9 +8,9 @@ import { Parallax } from "./Parallax";
 
 const Body = () => {
   return (
-    <div className="relative rounded-[20px] overflow-x-clip w-full min-h-screen z-20">
+    <div className="relative overflow-x-clip w-full min-h-screen z-20">
       {/* Arrow to About Me */}
-      <div
+      {/* <div
         className="cursor-pointer hidden"
         onClick={() =>
           document
@@ -19,11 +19,11 @@ const Body = () => {
         }
       >
         <ScrollArrow />
-      </div>
+      </div> */}
       {/* About Me Section */}
       <section
         id="aboutMe"
-        className="bg-light-primary dark:bg-dark-primary section-padding"
+        className="bg-light-primary dark:bg-dark-primary section-padding rounded-t-3xl"
       >
         <AboutMe />
         {/* Arrow to What I Do */}
@@ -57,7 +57,7 @@ const Body = () => {
       {/* Selected Works */}
       <section
         id="works"
-        className="bg-light-primary dark:bg-dark-primary section-padding"
+        className="bg-light-primary dark:bg-dark-primary section-padding rounded-b-3xl"
       >
         <Works />
       </section>

@@ -2,18 +2,51 @@
 "use client";
 import React, { useState } from "react";
 import InfoPane from "./InfoPane";
+import ThemeToggle from "./Dock";
+import { useTheme } from "./ThemeContext";
+
+const sunIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    width="32"
+    height="32"
+    className="text-[var(--accent)]"
+  >
+    <path
+      d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+const moonIcon = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 384 512"
+    width="32"
+    height="32"
+    className="text-[var(--accent)]"
+  >
+    <path
+      d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+      fill="currentColor"
+    />
+  </svg>
+);
 
 const MenuDropdown = ({ onClose }) => {
+  const { theme, toggleTheme } = useTheme();
   return (
-    <div className="bg-light-background top-[0px] right-0 dark:bg-dark-background absolute w-screen lg:w-[847px] h-screen lg:h-[606px] mx-[-25px] p-[20px] z-20 shadow-lg lg:rounded-[25px] flex flex-col justify-between">
-      <div className="flex w-full h-[64px] justify-end items-center">
+    <div className="dropdown-nav shadow-lg lg:rounded-[25px] sm:mr-[0px] lg:mr-[25px] bg-light-background dark:bg-dark-background">
+      <div className="nav-container justify-end gap-6">
         {/* Info Panel */}
-        <div className="w-full hidden sm:inline-block">
+        <div className="hidden sm:inline-block w-full">
           <InfoPane all={true} dropdown={true} />
         </div>
         {/* Menu Close */}
         <div
-          className="flex w-[64px] h-full justify-center items-center ml-[10px]"
+          className="flex h-[100px] justify-end items-center cursor-pointer"
           onClick={onClose}
         >
           <svg
@@ -27,17 +60,18 @@ const MenuDropdown = ({ onClose }) => {
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
-              d="M46.6667 5.66665H1.33333C0.59696 5.66665 0 5.06969 0 4.33331V1.66665C0 0.930273 0.59696 0.333313 1.33333 0.333313H46.6667C47.4029 0.333313 48 0.930273 48 1.66665V4.33331C48 5.06969 47.4029 5.66665 46.6667 5.66665ZM40 20.3333V17.6666C40 16.9304 39.4029 16.3333 38.6667 16.3333H9.33333C8.59696 16.3333 8 16.9304 8 17.6666V20.3333C8 21.0696 8.59696 21.6666 9.33333 21.6666H38.6667C39.4029 21.6666 40 21.0696 40 20.3333ZM32 33.6666V36.3333C32 37.0696 31.4029 37.6666 30.6667 37.6666H17.3333C16.597 37.6666 16 37.0696 16 36.3333V33.6666C16 32.9304 16.597 32.3333 17.3333 32.3333H30.6667C31.4029 32.3333 32 32.9304 32 33.6666Z"
+              d="M46.6667 5.66665H1.33333C0.59696 5.66665 0 5.06969 0 4.33331V1.66665C0 0.930273 0.59696 0.333313 1.33333 0.333313H46.6667C47.4029 0.333313 48 0.930273 48 1.66665V4.33331C48 5.06969 47.4029 5.66665 46.6667 5.66665ZM40
+             20.3333V17.6666C40 16.9304 39.4029 16.3333 38.6667 16.3333H9.33333C8.59696 16.3333 8 16.9304 8 17.6666V20.3333C8 21.0696 8.59696 21.6666 9.33333 21.6666H38.6667C39.4029 21.6666 40 21.0696 40 20.3333ZM32 33.6666V36.3333C32 37.0696 31.4029 37.6666 30.6667 37.6666H17.3333C16.597 37.6666 16 37.0696 16 36.3333V33.6666C16 32.9304 16.597 32.3333 17.3333 32.3333H30.6667C31.4029 32.3333 32 32.9304 32 33.6666Z"
               fill="currentColor"
             />
           </svg>
         </div>
       </div>
       {/* Navigation */}
-      <div className="flex w-full h-[410px] justify-end items-center px-[64px]">
-        <ul className="flex flex-col items-end text-[64px]">
+      <div className="flex w-full h-[410px] justify-end items-center">
+        <ul className="flex flex-col items-end navigation-text">
           <li
-            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
             onClick={() => {
               document
                 .getElementById("home")
@@ -48,7 +82,7 @@ const MenuDropdown = ({ onClose }) => {
             Home
           </li>
           <li
-            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
             onClick={() => {
               document
                 .getElementById("aboutMe")
@@ -59,7 +93,7 @@ const MenuDropdown = ({ onClose }) => {
             About
           </li>
           <li
-            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
             onClick={() => {
               document
                 .getElementById("services")
@@ -70,7 +104,7 @@ const MenuDropdown = ({ onClose }) => {
             Services
           </li>
           <li
-            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
             onClick={() => {
               document
                 .getElementById("works")
@@ -81,11 +115,13 @@ const MenuDropdown = ({ onClose }) => {
             Works
           </li>
           <li
-            className="heading font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
             onClick={() => {
-              document
-                .getElementById("contact")
-                .scrollIntoView({ behavior: "smooth" });
+              window.scrollTo({
+                left: 0,
+                top: document.documentElement.scrollHeight,
+                behavior: "smooth",
+              });
               onClose(); // Make sure onClose is called as a function
             }}
           >
@@ -95,8 +131,11 @@ const MenuDropdown = ({ onClose }) => {
       </div>
 
       {/* Social Media SVGs */}
-      <div className="flex flex-col w-full h-[32px]">
-        <ul className="flex flex-row justify-end sm:justify-start h-full items-start gap-[25px]">
+      <div className="flex flex-row w-full h-[32px] justify-between mt-6">
+        <button onClick={toggleTheme} className="z-50 cursor-pointer">
+          {theme === "light" ? moonIcon : sunIcon}
+        </button>
+        <ul className="flex flex-row justify-end sm:justify-start h-full items-start gap-2 sm:gap-6">
           <li>
             <svg
               width="32"

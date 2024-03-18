@@ -5,10 +5,9 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeContext";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/Dock";
 import { Parallax } from "@/components/Parallax";
 import Contact from "@/components/Contact";
-
 export const metadata = {
   title:
     "Durotimi Duro-Pirisola | Full-Stack Developer, UI/UX Designer & Content Producer",
@@ -25,13 +24,10 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className="dark">
           <div className="flex flex-col">
-            <SmoothScrolling>
-              {children}
-              
-            </SmoothScrolling>
+            <SmoothScrolling>{children}</SmoothScrolling>
           </div>
-          <div className="absolute z-50">
-            <ThemeToggle />{" "}
+          <div className="fixed inset-x-0 bottom-1 z-50 xl:block hidden shadow-lg">
+            <ThemeToggle />
           </div>
         </body>
       </html>

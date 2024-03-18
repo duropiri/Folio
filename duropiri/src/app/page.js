@@ -1,4 +1,7 @@
 "page.js";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Hero from "@/components/Hero";
 import Body from "@/components/Body";
 import Contact from "@/components/Contact";
@@ -14,14 +17,17 @@ export default function Home() {
 
         <Hero />
       </div>
-      <div className="h-svh"></div>
+      <div aria-hidden="true" className="h-svh pointer-events-none"></div>
       {/* Body Section */}
 
       <Body />
 
       <div className="mt-[-100svh]">
-        <div aria-hidden="true" className="h-svh relative"></div>
-        <section id="contact" className="section-padding sticky bottom-[-40%] no-padding-y">
+        <div aria-hidden="true" className="h-svh relative pointer-events-none"></div>
+        <section
+          id="contact"
+          className="section-padding sticky bottom-[-40%] no-padding-y"
+        >
           <Contact />
         </section>
       </div>

@@ -3,56 +3,52 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export function Parallax({ className, children, speed = 1, id = "parallax" }) {
+export function Parallax({ className, children, speed = 1, id = "parallax", endOpacity = 100 }) {
   const trigger = useRef();
   const target = useRef();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const updateParallax = () => {
-      const windowHeight = window.innerHeight;
-      const y = windowHeight * speed * 0.1;
-      const setY = gsap.quickSetter(target.current, "y", "px");
+    const windowHeight = window.innerHeight;
+    const y = windowHeight * speed * 0.1;
+    const setY = gsap.quickSetter(target.current, "y", "px");
+    const setOpacity = gsap.quickSetter(target.current, "opacity", "");
 
-      const recalculateStart = () => {
-        const elementTop = trigger.current.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-        const initialVisibilityOffset = elementTop - viewportHeight;
-        return initialVisibilityOffset < 0 ? `top+=${Math.abs(initialVisibilityOffset)} bottom` : "top bottom";
-      };
+    // Calculate start position once
+    const elementTop = trigger.current.getBoundingClientRect().top;
+    const viewportHeight = window.innerHeight;
+    const initialVisibilityOffset = elementTop - viewportHeight;
+    const start = `top+=${windowHeight} bottom`;
 
-      ScrollTrigger.create({
-        id: id,
-        trigger: trigger.current,
-        start: recalculateStart(),
-        end: "bottom top",
-        scrub: true,
-        markers: false, // Useful for debugging
-        onUpdate: (self) => {
-          const yPos = self.progress * y;
-          setY(yPos);
-        },
-        onRefresh: (self) => self.update({ // Listen for resize events and update start position
-          start: recalculateStart(),
-          end: "bottom top",
-        }),
-      });
-    };
+    ScrollTrigger.create({
+      id: id,
+      trigger: trigger.current,
+      start: start, // Use the calculated start position
+      end: "bottom top",
+      scrub: true,
+      // markers: true, // Useful for debugging
+      onUpdate: (self) => {
+        const yPos = self.progress * y;
+        const currentOpacity = 1 - self.progress * (1 - endOpacity);
+        setY(yPos);
+        setOpacity(currentOpacity);
+      }
+      // Removed the onRefresh callback to avoid recalculating start position on resize
+    });
 
-    updateParallax(); // Initial setup
-
-    ScrollTrigger.addEventListener("refreshInit", updateParallax); // Reinitialize on resize
+    // No longer need to reinitialize on resize
+    // ScrollTrigger.addEventListener("refreshInit", updateParallax);
 
     return () => {
       ScrollTrigger.getById(id)?.kill();
-      ScrollTrigger.removeEventListener("refreshInit", updateParallax); // Cleanup
+      // ScrollTrigger.removeEventListener("refreshInit", updateParallax); // Cleanup not necessary for refreshInit
     };
-  }, [speed, id]);
+  }, [speed, id]); // Dependencies remain the same
 
   return (
     <div ref={trigger} className={className}>
-      <div ref={target} className={className}>{children}</div>
+      <div ref={target} style={{ opacity: 1 }} className={className}>{children}</div>
     </div>
   );
 }

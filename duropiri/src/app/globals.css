@@ -207,7 +207,7 @@ body {
   min-height: 100lvh;
   justify-content: space-between;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 250px;
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -235,6 +235,14 @@ body {
     padding-right: 150px;
   }
 }
+
+@media (min-width: 1921px) {
+  .section-padding {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+
 .header-text {
   transform: translateY(0px) translateZ(0px);
 }
@@ -251,6 +259,12 @@ body {
   }
 }
 
+@media (min-width: 1280px) {
+  .section-heading {
+    font-size: 156px;
+  }
+}
+
 .section-subheading {
   font-size: 24px;
   font-weight: 600;
@@ -260,6 +274,46 @@ body {
 @media (min-width: 1024px) {
   .section-subheading {
     font-size: 32px;
+  }
+}
+
+.hero-text {
+  font-weight: bold;
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+@media (min-width: 560px) {
+  .hero-text {
+    font-weight: bold;
+    font-size: 128px;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    font-weight: bold;
+    font-size: 180px;
+    line-height: 150px;
+  }
+}
+
+.info-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+  text-wrap: balance;
+}
+
+.navigation-text {
+  font-size: 32px;
+}
+
+@media (min-width: 640px) {
+  .navigation-text {
+    font-size: 64px;
   }
 }
 
@@ -276,4 +330,43 @@ body {
   }
 }
 
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  align-items: center;
+}
 
+.dropdown-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  width: 100vw; /* w-screen */
+  height: 100vh; /* h-screen */
+  padding-right: 25px; /* px-[25px] */
+  padding-left: 50px; /* px-[25px] */
+  padding-bottom: 25px; /* pb-[25px] */
+  z-index: 20;
+}
+
+@media (min-width: 1024px) { /* Assuming 'lg' breakpoint is at 1024px */
+  .dropdown-nav {
+    width: 847px; /* lg:w-[847px] */
+    height: 606px; /* lg:h-[606px] */
+    padding-left: 25px; /* px-[25px] */
+  }
+}
+
+
+.magnetic-button {
+  position: relative;
+  display: inline-block;
+}
+
+.magnetic-button button {
+  position: relative;
+  transition: transform 0.2s ease-out;
+}
