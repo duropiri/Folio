@@ -20,46 +20,26 @@ const Body = () => {
       >
         <ScrollArrow />
       </div> */}
-      {/* About Me Section */}
-      <section
-        id="aboutMe"
-        className="bg-light-primary dark:bg-dark-primary section-padding rounded-t-3xl"
-      >
-        <AboutMe />
-        {/* Arrow to What I Do */}
-        {/* <div
-          onClick={() =>
-            document
-              .getElementById("services")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          <ScrollArrow />
-        </div> */}
-      </section>
       {/* What I Do Section */}
       <section
         id="services"
-        className="bg-light-primary dark:bg-dark-primary section-padding"
+        className="bg-light-primary dark:bg-dark-primary section-padding rounded-t-3xl"
       >
         <WhatIDo />
-        {/* Arrow to Works */}
-        {/* <div
-          onClick={() =>
-            document
-              .getElementById("works")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          <ScrollArrow />
-        </div> */}
       </section>
       {/* Selected Works */}
       <section
         id="works"
-        className="bg-light-primary dark:bg-dark-primary section-padding rounded-b-3xl"
+        className="bg-light-primary dark:bg-dark-primary section-padding "
       >
         <Works />
+      </section>
+      {/* About Me Section */}
+      <section
+        id="aboutMe"
+        className="bg-light-primary dark:bg-dark-primary section-padding rounded-b-3xl"
+      >
+        <AboutMe />
       </section>
     </div>
   );

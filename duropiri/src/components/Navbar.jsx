@@ -6,11 +6,9 @@ import GsapMagnetic from "./GsapMagnetic";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col px-[25px] lg:px-[50px] z-50 select-none">
+    <div className="flex flex-col px-[25px] lg:px-[50px] z-50 navigationbar">
       <div className="nav-container justify-between">
-        <GsapMagnetic>
-          <Logo />
-        </GsapMagnetic>
+        <Logo />
         {/* Hide InfoPane on xl screens and larger */}
         <div className="hidden xl:block">
           <InfoPane all={true} dropdown={false} />

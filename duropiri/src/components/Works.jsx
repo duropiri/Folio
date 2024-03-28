@@ -15,9 +15,69 @@ const Works = () => {
         </h2>
 
         <div className="flex flex-col xl:flex-row gap-[10px]">
-          <div className="w-full xl:w-1/3 h-[250px] xl:h-[500px] bg-light-background dark:bg-dark-background"></div>
-          <div className="w-full xl:w-1/3 h-[250px] xl:h-[500px] bg-light-secondary dark:bg-dark-secondary"></div>
-          <div className="w-full xl:w-1/3 h-[250px] xl:h-[500px] bg-light-accent dark:bg-dark-accent"></div>
+          
+          
+          
+          <div className="card w-full xl:w-1/3">
+            <figure>
+              {/* <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              /> */}
+              <div className="w-full h-[250px] xl:h-[500px] bg-light-background dark:bg-dark-background"></div>
+            </figure>
+            <div className="card-body text-light-background dark:text-dark-background">
+              <h2 className="card-title header-text">
+                Shoes!
+                <div className="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <div className="badge badge-outline transition-none">Fashion</div>
+                <div className="badge badge-outline transition-none">Products</div>
+              </div>
+            </div>
+          </div>
+          <div className="card w-full xl:w-1/3">
+            <figure>
+              {/* <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              /> */}
+              <div className="w-full h-[250px] xl:h-[500px] bg-light-secondary dark:bg-dark-secondary"></div>
+            </figure>
+            <div className="card-body text-light-background dark:text-dark-background">
+              <h2 className="card-title">
+                Shoes!
+                <div className="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <div className="badge badge-outline transition-none">Fashion</div>
+                <div className="badge badge-outline transition-none">Products</div>
+              </div>
+            </div>
+          </div>
+          <div className="card w-full xl:w-1/3">
+            <figure>
+              {/* <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              /> */}
+              <div className="w-full h-[250px] xl:h-[500px] bg-light-accent dark:bg-dark-accent"></div>
+            </figure>
+            <div className="card-body text-light-background dark:text-dark-background">
+              <h2 className="card-title">
+                Shoes!
+                <div className="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <div className="badge badge-outline transition-none">Fashion</div>
+                <div className="badge badge-outline transition-none">Products</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[30px] w-full">

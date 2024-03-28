@@ -5,31 +5,6 @@ import { Parallax } from "./Parallax";
 const WhatIDo = () => {
   return (
     <div className="relative w-full h-full">
-      {/* Parallax */}
-      {/* <div className="flex flex-col self-start absolute w-screen items-center z-[-10]">
-        <Parallax speed={3}>
-          <div data-speed="3" className="">
-            <div className="absolute w-full h-full bg-gradient-to-t from-dark-primary "></div>
-
-            <svg
-              width="1114"
-              height="1055"
-              viewBox="0 0 1114 1055"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mt-[-31%] text-light-background/25 dark:text-dark-background/25"
-            >
-              <ellipse
-                cx="557"
-                cy="527.5"
-                rx="557"
-                ry="527.5"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </Parallax>
-      </div> */}
       {/* Content */}
       <div className="flex flex-col justify-start gap-[50px] xl:gap-[100px] z-10">
         <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[25px]">
@@ -56,43 +31,35 @@ const WhatIDo = () => {
 
           {/* Accordion */}
           <div className="flex flex-col w-full xl:w-1/2 py-[25px]">
-            <ul className="flex flex-col gap-[20px]">
-              <li className="flex justify-between">
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  Web Development
-                </span>
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  +
-                </span>
-              </li>
-              <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
-              <li className="flex justify-between">
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  Web Design
-                </span>
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  +
-                </span>
-              </li>
-              <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
-              <li className="flex justify-between">
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  SEO & Marketing
-                </span>
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  +
-                </span>
-              </li>
-              <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
-              <li className="flex justify-between">
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  Audio Engineering
-                </span>
-                <span className="text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                  +
-                </span>
-              </li>
-            </ul>
+            <div className="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" defaultChecked />
+              <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
+                Web Development
+              </div>
+              <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
+                <p>I create unique, custom-coded websites that are tailored to your brand. I focus on scalability, performance, accessibility, and engaging animations for a memorable experience.</p>
+              </div>
+            </div>
+            <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
+            <div className="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
+                Web Design
+              </div>
+              <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
+                <p>I design user-centric websites that enhance your brand and drive business goals. Clean typography and minimal layouts has my full attention to create a compelling online presence.</p>
+              </div>
+            </div>
+            <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
+            <div className="collapse collapse-plus">
+              <input type="radio" name="my-accordion-3" />
+              <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
+                SEO & Marketing
+              </div>
+              <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
+                <p>Beyond crafting visually memorable websites, I also optimize your online presence to elevate your visibility in search rankings so your voices can be heard in the digital landscape.</p>
+              </div>
+            </div>
           </div>
         </div>
         {/* Tech Stack */}
@@ -101,7 +68,7 @@ const WhatIDo = () => {
             <h3 className="relative font-khand section-subheading text-light-background dark:text-dark-background">
               <span aria-hidden="true">
                 <span class=" inline-block">
-                  <span class="pb-1 sm:pb-2 relative  overflow-hidden inline-flex">
+                  <span class="pb-1 sm:pb-2 relative overflow-hidden inline-flex">
                     <span className="header-text">Tech Stack.</span>
                   </span>
                 </span>

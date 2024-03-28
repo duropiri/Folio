@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html lang="en">
         <body className="dark">
+          <div className="texture-overlay"></div>
           <div className="flex flex-col">
             <SmoothScrolling>{children}</SmoothScrolling>
           </div>

@@ -3,36 +3,6 @@ import React from "react";
 import { useTheme } from "./ThemeContext"; // Adjust the import path as necessary
 import GsapMagnetic from "./GsapMagnetic";
 
-const sunIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 512 512"
-    width="18"
-    height="18"
-    className="text-[var(--primary)]"
-  >
-    <path
-      d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const moonIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 384 512"
-    width="18"
-    height="18"
-    className="text-[var(--primary)]"
-  >
-    <path
-      d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme(); // Assuming `theme` can be 'light' or 'dark'
 
@@ -41,9 +11,28 @@ export default function ThemeToggle() {
       <div className=" rounded-lg xl:opacity-25 hover:opacity-100 transition-opacity">
         <div className="px-2.5 rounded-md bg-[var(--background)] text-white outline-none inline-flex items-center gap-4 m-1">
           <GsapMagnetic>
-            <button onClick={toggleTheme} className="z-50 cursor-pointer p-2.5">
-              {theme === "light" ? moonIcon : sunIcon}
-            </button>
+            <label className="swap swap-rotate">
+              {/* this hidden checkbox controls the state */}
+              <input type="checkbox" onClick={toggleTheme} />
+
+              {/* sun icon */}
+              <svg
+                className="swap-on fill-current w-6 h-6 text-[var(--primary)]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+              </svg>
+
+              {/* moon icon */}
+              <svg
+                className="swap-off fill-current w-6 h-6 text-[var(--primary)]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+              </svg>
+            </label>
           </GsapMagnetic>
           <ul className="flex flex-row text-[18px] gap-4">
             <GsapMagnetic>
@@ -58,18 +47,7 @@ export default function ThemeToggle() {
                 Home
               </li>
             </GsapMagnetic>
-            <GsapMagnetic>
-              <li
-                className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
-                onClick={() => {
-                  document
-                    .getElementById("aboutMe")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                About
-              </li>
-            </GsapMagnetic>
+
             <GsapMagnetic>
               <li
                 className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
@@ -92,6 +70,18 @@ export default function ThemeToggle() {
                 }}
               >
                 Works
+              </li>
+            </GsapMagnetic>
+            <GsapMagnetic>
+              <li
+                className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
+                onClick={() => {
+                  document
+                    .getElementById("aboutMe")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                About
               </li>
             </GsapMagnetic>
             <GsapMagnetic>
