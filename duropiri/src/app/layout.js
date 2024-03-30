@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/ThemeContext";
 import ThemeToggle from "@/components/Dock";
 import { Parallax } from "@/components/Parallax";
 import Contact from "@/components/Contact";
+import CustomCursor from "@/components/CustomCursor";
 export const metadata = {
   title:
     "Durotimi Duro-Pirisola | Full-Stack Developer, UI/UX Designer & Content Producer",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html lang="en">
         <body className="dark">
+          <CustomCursor />
           <div className="texture-overlay"></div>
           <div className="flex flex-col">
             <SmoothScrolling>{children}</SmoothScrolling>

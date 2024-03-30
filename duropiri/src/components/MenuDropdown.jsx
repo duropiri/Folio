@@ -1,71 +1,97 @@
 // MenuDropdown.jsx
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import InfoPane from "./InfoPane";
 import ThemeToggle from "./Dock";
 import { useTheme } from "./ThemeContext";
+import { gsap } from "gsap";
 
-const sunIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 512 512"
-    width="32"
-    height="32"
-    className="text-[var(--accent)]"
-  >
-    <path
-      d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const moonIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 384 512"
-    width="32"
-    height="32"
-    className="text-[var(--accent)]"
-  >
-    <path
-      d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
-      fill="currentColor"
-    />
-  </svg>
-);
-
-const MenuDropdown = ({ onClose }) => {
+const MenuDropdown = ({ onClose, isOpen }) => {
   const { theme, toggleTheme } = useTheme();
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      // Opening animation: Expand out from the right
+      gsap.fromTo(
+        dropdownRef.current,
+        { x: "100%", opacity: 0 }, // Start from the right and fully transparent
+        { x: "0%", opacity: 1, duration: 1, ease: "power2.out" } // Move to its original position and fade in
+      );
+    } else {
+      // Closing animation: Fade out
+      gsap.to(
+        dropdownRef.current,
+        {
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.in",
+          onComplete: () => gsap.set(dropdownRef.current, { x: "100%" }),
+        } // Optionally move it to the right after fading out
+      );
+    }
+  }, [isOpen]);
+
   return (
-    <div className="dropdown-nav shadow-lg lg:rounded-[25px] sm:mr-[0px] lg:mr-[25px] bg-light-background dark:bg-dark-background">
+    <div
+      ref={dropdownRef}
+      className="dropdown-nav dropdown-content shadow-lg lg:rounded-[25px] sm:mr-[0px] lg:mr-[25px] bg-light-background dark:bg-dark-background overflow-hidden"
+      style={{ opacity: 0, transform: "translateX(100%)" }} // Initial state off-screen to the right
+    >
+      {/* SVG */}
+      <div className="flex fixed justify-end pointer-events-none">
+        <div className="overflow-hidden">
+          <svg
+            viewBox="0 0 1114 1055"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-11/12 h-[1055px] text-light-primary/25 dark:text-dark-primary/25"
+          >
+            <defs>
+              <linearGradient
+                id="fadeGradient"
+                x1="0%"
+                y1="0%"
+                x2="0%"
+                y2="80%"
+              >
+                <stop offset="0%" stop-color="currentColor" stop-opacity="1" />
+                <stop
+                  offset="0%"
+                  stop-color="currentColor"
+                  stop-opacity="0.7"
+                />
+                <stop
+                  offset="20%"
+                  stop-color="currentColor"
+                  stop-opacity="0.5"
+                />
+                <stop
+                  offset="40%"
+                  stop-color="currentColor"
+                  stop-opacity="0.3"
+                />
+                <stop offset="80%" stop-color="currentColor" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <ellipse
+              cx="557"
+              cy="527.5"
+              rx="557"
+              ry="527.5"
+              fill="url(#fadeGradient)"
+            />
+          </svg>
+        </div>
+      </div>
       <div className="nav-container justify-end gap-6">
         {/* Info Panel */}
         <div className="hidden sm:inline-block w-full">
           <InfoPane all={true} dropdown={true} />
         </div>
         {/* Menu Close */}
-        <div
-          className="flex h-[100px] justify-end items-center cursor-pointer"
-          onClick={onClose}
-        >
-          <svg
-            width="48"
-            height="38"
-            viewBox="0 0 48 38"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-light-accent dark:text-dark-accent cursor-pointer"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M46.6667 5.66665H1.33333C0.59696 5.66665 0 5.06969 0 4.33331V1.66665C0 0.930273 0.59696 0.333313 1.33333 0.333313H46.6667C47.4029 0.333313 48 0.930273 48 1.66665V4.33331C48 5.06969 47.4029 5.66665 46.6667 5.66665ZM40
-             20.3333V17.6666C40 16.9304 39.4029 16.3333 38.6667 16.3333H9.33333C8.59696 16.3333 8 16.9304 8 17.6666V20.3333C8 21.0696 8.59696 21.6666 9.33333 21.6666H38.6667C39.4029 21.6666 40 21.0696 40 20.3333ZM32 33.6666V36.3333C32 37.0696 31.4029 37.6666 30.6667 37.6666H17.3333C16.597 37.6666 16 37.0696 16 36.3333V33.6666C16 32.9304 16.597 32.3333 17.3333 32.3333H30.6667C31.4029 32.3333 32 32.9304 32 33.6666Z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
+        <div className="flex h-[100px] justify-end items-center cursor-pointer w-12"></div>
       </div>
       {/* Navigation */}
       <div className="flex w-full h-[410px] justify-end items-center">
@@ -80,17 +106,6 @@ const MenuDropdown = ({ onClose }) => {
             }}
           >
             Home
-          </li>
-          <li
-            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
-            onClick={() => {
-              document
-                .getElementById("aboutMe")
-                .scrollIntoView({ behavior: "smooth" });
-              onClose(); // Make sure onClose is called as a function
-            }}
-          >
-            About
           </li>
           <li
             className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
@@ -113,6 +128,17 @@ const MenuDropdown = ({ onClose }) => {
             }}
           >
             Works
+          </li>
+          <li
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            onClick={() => {
+              document
+                .getElementById("aboutMe")
+                .scrollIntoView({ behavior: "smooth" });
+              onClose(); // Make sure onClose is called as a function
+            }}
+          >
+            About
           </li>
           <li
             className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"

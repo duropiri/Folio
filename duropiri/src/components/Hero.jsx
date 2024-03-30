@@ -1,28 +1,58 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { Parallax } from "@/components/Parallax";
 import { ScrollTriggeredAnimation } from "./ScrollTriggeredAnimation";
+import { useTheme } from "@/components/ThemeContext";
 
 const Hero = () => {
+  const { navbarHeight } = useTheme();
+
+  console.log("Navbar Height: " + navbarHeight);
+
   return (
     <section className="flex items-end sm:items-center section-padding sticky top-0 custom-height z-0">
       {/* SVG */}
-      <div className="flex fixed w-full justify-end pr-0 xl:pr-[12%] mt-[5vh]  pointer-events-none">
+      <div className="flex fixed w-full justify-end xl:pr-[12%] mt-[5vh] mr-[-25px] md:mr-0 pointer-events-none">
         <div className="overflow-hidden">
-          <div className="absolute w-full h-full mt-[1%] bg-gradient-to-t from-light-background dark:from-dark-background"></div>
           <svg
-            width="1114"
-            height="1055"
             viewBox="0 0 1114 1055"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="text-light-primary/25 dark:text-dark-primary/25"
+            className=" w-11/12 h-[1055px] text-light-primary/25 dark:text-dark-primary/25"
           >
+            <defs>
+              <linearGradient
+                id="fadeGradient"
+                x1="0%"
+                y1="0%"
+                x2="0%"
+                y2="80%"
+              >
+                <stop offset="0%" stop-color="currentColor" stop-opacity="1" />
+                <stop
+                  offset="0%"
+                  stop-color="currentColor"
+                  stop-opacity="0.7"
+                />
+                <stop
+                  offset="20%"
+                  stop-color="currentColor"
+                  stop-opacity="0.5"
+                />
+                <stop
+                  offset="40%"
+                  stop-color="currentColor"
+                  stop-opacity="0.3"
+                />
+                <stop offset="80%" stop-color="currentColor" stop-opacity="0" />
+              </linearGradient>
+            </defs>
             <ellipse
               cx="557"
               cy="527.5"
               rx="557"
               ry="527.5"
-              fill="currentColor"
+              fill="url(#fadeGradient)"
             />
           </svg>
         </div>
@@ -31,11 +61,11 @@ const Hero = () => {
       {/* Content */}
       {/* <Parallax speed={4} endOpacity={1} className="w-full h-full z-10 relative"> */}
       <ScrollTriggeredAnimation
-        fade={0}
-        offset=".navigationbar"
         className="w-full h-full z-10"
+        fade={0}
+        offset={`top-=${(navbarHeight)}`}
       >
-        <div className="flex flex-col h-full justify-center gap-y-3 sm:gap-y-8 items-start sm:items-start target">
+        <div className="flex flex-col h-full justify-center gap-y-3 sm:gap-y-8 items-start sm:items-start">
           {/* Title */}
           <ul className="font-khand hero-text whitespace-nowrap duration-500">
             <li className="text-light-primary dark:text-dark-primary">

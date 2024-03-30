@@ -3,43 +3,57 @@
 import React, { useState } from "react";
 import MenuDropdown from "./MenuDropdown";
 
-const Menu = () => {
+const Menu = ({}) => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
   };
 
+  const labelPositionClass = isDropdownVisible
+    ? "fixed top-0 right-0 mr-[25px] lg:mr-[50px]"
+    : "relative";
+
   return (
     <div className="relative flex w-full">
       <div
-        className="flex h-[100px] justify-end items-center cursor-pointer"
-        onClick={toggleDropdown}
+        className={`flex h-[100px] justify-end items-center cursor-pointer z-50 ${labelPositionClass}`}
       >
-        <svg
-          width="48"
-          height="38"
-          viewBox="0 0 48 38"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-light-accent dark:text-dark-accent cursor-pointer"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M46.6667 5.66665H1.33333C0.59696 5.66665 0 5.06969 0 4.33331V1.66665C0 0.930273 0.59696 0.333313 1.33333 0.333313H46.6667C47.4029 0.333313 48 0.930273 48 1.66665V4.33331C48 5.06969 47.4029 5.66665 46.6667 5.66665ZM40
-             20.3333V17.6666C40 16.9304 39.4029 16.3333 38.6667 16.3333H9.33333C8.59696 16.3333 8 16.9304 8 17.6666V20.3333C8 21.0696 8.59696 21.6666 9.33333 21.6666H38.6667C39.4029 21.6666 40 21.0696 40 20.3333ZM32 33.6666V36.3333C32 37.0696 31.4029 37.6666 30.6667 37.6666H17.3333C16.597 37.6666 16 37.0696 16 36.3333V33.6666C16 32.9304 16.597 32.3333 17.3333 32.3333H30.6667C31.4029 32.3333 32 32.9304 32 33.6666Z"
-            fill="currentColor"
+        <label className="btn btn-circle swap swap-rotate bg-black/0 border-none">
+          {/* this hidden checkbox controls the state */}
+          <input
+            type="checkbox"
+            onChange={toggleDropdown}
+            checked={isDropdownVisible}
+            style={{ display: "none" }}
           />
-        </svg>
+
+          {/* hamburger icon */}
+          <svg
+            className="swap-off fill-current text-light-accent dark:text-dark-accent cursor-pointer w-12 h-12"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+          </svg>
+
+          {/* close icon */}
+          <svg
+            className="swap-on fill-current text-light-accent dark:text-dark-accent cursor-pointer w-12 h-12"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+          </svg>
+        </label>
       </div>
       {isDropdownVisible && (
         <div className="w-full">
           <div
-            className="fixed lg:inset-0 bg-black bg-opacity-50 z-10"
+            className="fixed lg:inset-0 bg-black bg-opacity-75 z-10"
             onClick={toggleDropdown}
           ></div>
-          <MenuDropdown onClose={toggleDropdown}/>
+          <MenuDropdown onClose={toggleDropdown} isOpen={isDropdownVisible} />
         </div>
       )}
     </div>

@@ -45,17 +45,31 @@
 
   body {
     @apply bg-light-background; /* Light mode background color */
+    @apply text-light-text;
+    cursor: none !important;
   }
   .dark {
     @apply bg-dark-background; /* Dark mode background color */
   }
 
+  a,
+  li,
+  label,
+  div,
+  input,
+  textarea,
+  button,
+  a:hover,
+  button:hover,
+  a:focus,
+  button:focus {
+    cursor: none !important;
+  }
+
   html {
     @apply text-light-text;
   }
-  body {
-    @apply text-light-text;
-  }
+
   @media (prefers-color-scheme: dark) {
     html {
       @apply text-dark-text;

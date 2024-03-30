@@ -5,7 +5,7 @@ import InfoPane from "./InfoPane";
 
 const Footer = () => {
   return (
-    <div className="flex flex-row h-[102px] justify-between items-center my-[50px]">
+    <div className="flex flex-row h-[102px] justify-between items-center md:my-[50px]">
       <div className="w-1/3">
         <ul className="font-khand font-semibold text-[32px] lg:text-[64px] uppercase text-light-primary dark:text-dark-primary leading-[80%]">
           <li>

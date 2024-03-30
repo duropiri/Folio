@@ -3,19 +3,22 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export function ScrollTriggeredAnimation({ className, children, fade = 1 }) {
+export function ScrollTriggeredAnimation({
+  className,
+  children,
+  fade = 1,
+  offset = `top`,
+}) {
   const trigger = useRef();
   const target = useRef();
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const navbar = document.querySelector(".navigationbar"); // Use your navbar's actual selector
-    const navbarHeight = navbar.offsetHeight;
+    gsap.registerPlugin(ScrollTrigger);    
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: trigger.current,
-        start: `top-=${navbarHeight}px top`, // When the top of the trigger hits the top of the viewport
+        start: `${offset} top`, // When the top of the trigger hits the top of the viewport
         end: "+=500vh", // End after scrolling x distance beyond the start
         scrub: true, // Smooth scrubbing
         markers: false,
@@ -35,7 +38,9 @@ export function ScrollTriggeredAnimation({ className, children, fade = 1 }) {
 
   return (
     <div ref={trigger} className={className}>
-      <div ref={target} className={className}>{children}</div>
+      <div ref={target} className={className}>
+        {children}
+      </div>
     </div>
   );
 }

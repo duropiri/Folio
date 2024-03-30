@@ -47,55 +47,71 @@ const Contact = () => {
                       <div className="w-full h-[2px] bg-light-primary dark:bg-dark-primary"></div>
                       {/* Navigation */}
                       <ul className="flex flex-col gap-[8px]">
-                        <li
-                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
-                          onClick={() =>
-                            document
-                              .getElementById("home")
-                              .scrollIntoView({ behavior: "smooth" })
-                          }
-                        >
-                          Home
+                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() =>
+                              document
+                                .getElementById("home")
+                                .scrollIntoView({ behavior: "smooth" })
+                            }
+                          >
+                            Home
+                          </a>
                         </li>
-                        <li
-                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
-                          onClick={() =>
-                            document
-                              .getElementById("aboutMe")
-                              .scrollIntoView({ behavior: "smooth" })
-                          }
-                        >
-                          About
+
+                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() =>
+                              document
+                                .getElementById("aboutMe")
+                                .scrollIntoView({ behavior: "smooth" })
+                            }
+                          >
+                            About
+                          </a>
                         </li>
-                        <li
-                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
-                          onClick={() =>
-                            document
-                              .getElementById("services")
-                              .scrollIntoView({ behavior: "smooth" })
-                          }
-                        >
-                          Services
+                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() =>
+                              document
+                                .getElementById("services")
+                                .scrollIntoView({ behavior: "smooth" })
+                            }
+                          >
+                            Services
+                          </a>
                         </li>
-                        <li
-                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
-                          onClick={() =>
-                            document
-                              .getElementById("works")
-                              .scrollIntoView({ behavior: "smooth" })
-                          }
-                        >
-                          Works
+                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() =>
+                              document
+                                .getElementById("works")
+                                .scrollIntoView({ behavior: "smooth" })
+                            }
+                          >
+                            Works
+                          </a>
                         </li>
-                        <li
-                          className="text-[16px] text-light-primary dark:text-dark-primary cursor-pointer"
-                          onClick={() =>
-                            document
-                              .getElementById("contact")
-                              .scrollIntoView({ behavior: "smooth" })
-                          }
-                        >
-                          Contact
+                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() =>
+                              document
+                                .getElementById("contact")
+                                .scrollIntoView({ behavior: "smooth" })
+                            }
+                          >
+                            Contact
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -244,11 +260,10 @@ const Contact = () => {
                 </div>
 
                 {/* Form */}
-                <div className="flex flex-col w-full min-h-[489px] xl:w-1/2 gap-[30px] ">
-                  <div className="flex flex-row w-full h-[48px] gap-[20px]">
-                    <div className="w-1/2">
-                      <label className="input input-bordered flex items-center gap-2 bg-transparent border-0 border-r-2 border-b-2 text-[16px] border-light-primary dark:border-dark-primary">
-                        
+                <div className="flex flex-col w-full h-auto xl:w-1/2 gap-[30px]">
+                  <div className="flex flex-row w-full h-[48px]">
+                    <div className="w-1/2 pr-1">
+                      <label className="input input-bordered flex pl-0 pr-0 sm:pl-4 sm:pr-4 items-center gap-2 bg-transparent border-0 border-r-2 border-b-2 text-[16px] border-light-primary dark:border-dark-primary">
                         <input
                           type="text"
                           className="grow text-light-primary dark:text-dark-primary"
@@ -256,9 +271,8 @@ const Contact = () => {
                         />
                       </label>
                     </div>
-                    <div className="w-1/2 h-full">
-                      <label className="input input-bordered flex items-center gap-2 bg-transparent border-0 border-r-2 border-b-2 text-[16px] border-light-primary dark:border-dark-primary">
-                        
+                    <div className="w-1/2 pl-1">
+                      <label className="input input-bordered flex pl-0 pr-0 sm:pl-4 sm:pr-4 items-center gap-2 bg-transparent border-0 border-r-2 border-b-2 text-[16px] border-light-primary dark:border-dark-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 16 16"

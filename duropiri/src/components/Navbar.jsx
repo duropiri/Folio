@@ -1,12 +1,15 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import Logo from "@/components/Logo";
 import InfoPane from "@/components/InfoPane";
 import Menu from "@/components/Menu";
 import GsapMagnetic from "./GsapMagnetic";
 
 const Navbar = () => {
+
+
   return (
-    <div className="flex flex-col px-[25px] lg:px-[50px] z-50 navigationbar">
+    <div className="flex flex-col px-[25px] lg:px-[50px] z-50">
       <div className="nav-container justify-between">
         <Logo />
         {/* Hide InfoPane on xl screens and larger */}
