@@ -17,7 +17,7 @@ const Menu = ({}) => {
   return (
     <div className="relative flex w-full">
       <div
-        className={`flex h-[100px] justify-end items-center cursor-pointer z-50 ${labelPositionClass}`}
+        className={`flex h-[100px] justify-end items-center z-50 ${labelPositionClass}`}
       >
         <label className="btn btn-circle swap swap-rotate bg-black/0 border-none">
           {/* this hidden checkbox controls the state */}
@@ -30,7 +30,7 @@ const Menu = ({}) => {
 
           {/* hamburger icon */}
           <svg
-            className="swap-off fill-current text-light-accent dark:text-dark-accent cursor-pointer w-12 h-12"
+            className="swap-off fill-current text-light-accent dark:text-dark-accent w-12 h-12"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >
@@ -39,7 +39,7 @@ const Menu = ({}) => {
 
           {/* close icon */}
           <svg
-            className="swap-on fill-current text-light-accent dark:text-dark-accent cursor-pointer w-12 h-12"
+            className="swap-on fill-current text-light-accent dark:text-dark-accent w-12 h-12"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >

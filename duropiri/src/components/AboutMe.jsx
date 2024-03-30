@@ -10,7 +10,7 @@ const AboutMe = () => {
         <h2 className="relative font-khand section-heading text-light-background dark:text-dark-background mb-[-10%]">
           <span aria-hidden="true">
             <span class=" inline-block">
-              <span class="pb-1 sm:pb-2 relative overflow-hidden inline-flex">
+              <span class="pb-1 sm:pb-2 relative overflow-hidden inline-flex z-50">
                 <span className="header-text">About Me.</span>
               </span>
             </span>
@@ -22,9 +22,19 @@ const AboutMe = () => {
             speed={2}
             className="flex justify-center z-0 max-w-sm 2xl:max-w-lg 3xl:max-w-xl relative mx-auto pointer-events-none -mt-24"
           > */}
-        <ScrollTriggeredAnimation offset={"profileimage"} className="profileimage flex justify-center z-0 max-w-sm 2xl:max-w-lg 3xl:max-w-xl relative mx-auto pointer-events-none -mt-24">
+        <ScrollTriggeredAnimation
+          offset={"profileimage"}
+          className="profileimage flex justify-center z-0 max-w-sm 2xl:max-w-lg 3xl:max-w-xl relative mx-auto pointer-events-none -mt-24"
+        >
           {/* <div className="absolute w-[200%] h-[100%] mt-[10%] bg-gradient-to-t from-light-primary dark:from-dark-primary via-transparent dark:via-transparent via-60%" /> */}
-          <div className="mt-[5vh] w-[500px] h-[600px] bg-gradient-to-t from-transparent dark:from-transparent via-light-background dark:via-dark-background via-100% rounded-3xl pointer-events-none"></div>
+          <div className="mt-[5vh] w-[500px] h-[600px] rounded-3xl overflow-hidden relative group">
+            <img
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 pointer-events-none"
+              src="https://placehold.co/500x600.png?text=Headshot"
+              alt="Headshot"
+            />
+            <div className="absolute -inset-1 bg-gradient-to-t from-light-primary dark:from-dark-primary via-transparent dark:via-transparent via-100% opacity-100 pointer-events-none"></div>
+          </div>
         </ScrollTriggeredAnimation>
         {/* </Parallax> */}
       </div>

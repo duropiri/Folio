@@ -49,6 +49,7 @@ const Contact = () => {
                       <ul className="flex flex-col gap-[8px]">
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
+                            className="followerchangetest"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() =>
@@ -63,19 +64,7 @@ const Contact = () => {
 
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() =>
-                              document
-                                .getElementById("aboutMe")
-                                .scrollIntoView({ behavior: "smooth" })
-                            }
-                          >
-                            About
-                          </a>
-                        </li>
-                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
-                          <a
+                            className="followerchangetest"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() =>
@@ -89,6 +78,7 @@ const Contact = () => {
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
+                            className="followerchangetest"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() =>
@@ -102,6 +92,21 @@ const Contact = () => {
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
+                            className="followerchangetest"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() =>
+                              document
+                                .getElementById("aboutMe")
+                                .scrollIntoView({ behavior: "smooth" })
+                            }
+                          >
+                            About
+                          </a>
+                        </li>
+                        <li className="text-[16px] text-light-primary dark:text-dark-primary">
+                          <a
+                            className="followerchangetest"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() =>
@@ -137,6 +142,7 @@ const Contact = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
+                                    className="followerchangetest"
                                     href="https://www.linkedin.com/in/duro-p-045817244/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -163,6 +169,7 @@ const Contact = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
+                                    className="followerchangetest"
                                     href="https://www.facebook.com/durodp/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -187,6 +194,7 @@ const Contact = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
+                                    className="followerchangetest"
                                     href="https://www.instagram.com/duropiri/?hl=en"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -213,6 +221,7 @@ const Contact = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
+                                    className="followerchangetest"
                                     href="https://www.example.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -238,6 +247,7 @@ const Contact = () => {
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
+                            className="followerchangetest"
                             href="https://www.example.com"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -247,6 +257,7 @@ const Contact = () => {
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
+                            className="followerchangetest"
                             href="https://github.com/duropiri"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -266,7 +277,7 @@ const Contact = () => {
                       <label className="input input-bordered flex pl-0 pr-0 sm:pl-4 sm:pr-4 items-center gap-2 bg-transparent border-0 border-r-2 border-b-2 text-[16px] border-light-primary dark:border-dark-primary">
                         <input
                           type="text"
-                          className="grow text-light-primary dark:text-dark-primary"
+                          className="grow text-light-primary dark:text-dark-primary text-field-hover"
                           placeholder="Your name"
                         />
                       </label>
@@ -284,7 +295,7 @@ const Contact = () => {
                         </svg>
                         <input
                           type="text"
-                          className="grow text-light-primary dark:text-dark-primary"
+                          className="grow text-light-primary dark:text-dark-primary text-field-hover"
                           placeholder="Your email"
                         />
                       </label>
@@ -292,7 +303,7 @@ const Contact = () => {
                   </div>
                   <div className="w-full h-full">
                     <textarea
-                      className="textarea bg-transparent border-0 border-r-2 border-b-2 w-full h-full text-[16px] text-light-primary dark:text-dark-primary border-light-primary dark:border-dark-primary"
+                      className="textarea bg-transparent border-0 border-r-2 border-b-2 w-full h-full text-[16px] text-light-primary dark:text-dark-primary border-light-primary dark:border-dark-primary text-field-hover"
                       placeholder="Your message..."
                     ></textarea>
                   </div>

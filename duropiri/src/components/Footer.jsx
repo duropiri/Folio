@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
       <GsapMagnetic>
         <div
-          className="cursor-pointer"
+          className="followerchangetest"
           onClick={() =>
             document
               .getElementById("home")

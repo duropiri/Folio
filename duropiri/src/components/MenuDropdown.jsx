@@ -91,13 +91,13 @@ const MenuDropdown = ({ onClose, isOpen }) => {
           <InfoPane all={true} dropdown={true} />
         </div>
         {/* Menu Close */}
-        <div className="flex h-[100px] justify-end items-center cursor-pointer w-12"></div>
+        <div className="flex h-[100px] justify-end items-center w-12"></div>
       </div>
       {/* Navigation */}
       <div className="flex w-full h-[410px] justify-end items-center">
         <ul className="flex flex-col items-end navigation-text">
           <li
-            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px]"
             onClick={() => {
               document
                 .getElementById("home")
@@ -108,7 +108,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
             Home
           </li>
           <li
-            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px]"
             onClick={() => {
               document
                 .getElementById("services")
@@ -119,7 +119,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
             Services
           </li>
           <li
-            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px]"
             onClick={() => {
               document
                 .getElementById("works")
@@ -130,7 +130,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
             Works
           </li>
           <li
-            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px]"
             onClick={() => {
               document
                 .getElementById("aboutMe")
@@ -141,7 +141,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
             About
           </li>
           <li
-            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px] cursor-pointer"
+            className="font-semibold text-light-primary dark:text-dark-primary flex h-[78px]"
             onClick={() => {
               window.scrollTo({
                 left: 0,

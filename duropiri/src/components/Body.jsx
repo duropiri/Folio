@@ -9,17 +9,6 @@ import { Parallax } from "./Parallax";
 const Body = () => {
   return (
     <div className="relative overflow-x-clip w-full min-h-screen z-20">
-      {/* Arrow to About Me */}
-      {/* <div
-        className="cursor-pointer hidden"
-        onClick={() =>
-          document
-            .getElementById("aboutMe")
-            .scrollIntoView({ behavior: "smooth" })
-        }
-      >
-        <ScrollArrow />
-      </div> */}
       {/* What I Do Section */}
       <section
         id="services"

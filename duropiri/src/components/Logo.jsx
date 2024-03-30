@@ -5,7 +5,7 @@ import Link from "next/link";
 const Logo = () => {
   return (
     <div className="logo">
-        <Link href="/">
+        <Link href="/" className="followerchangetest">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1019 1101"

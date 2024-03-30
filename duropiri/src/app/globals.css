@@ -53,16 +53,12 @@
   }
 
   a,
-  li,
   label,
   div,
   input,
   textarea,
-  button,
-  a:hover,
-  button:hover,
-  a:focus,
-  button:focus {
+  button
+  {
     cursor: none !important;
   }
 

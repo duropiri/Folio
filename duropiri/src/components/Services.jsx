@@ -31,8 +31,8 @@ const WhatIDo = () => {
 
           {/* Accordion */}
           <div className="flex flex-col w-full xl:w-1/2 py-[25px]">
-            <div className="collapse collapse-plus">
-              <input type="radio" name="my-accordion-3" defaultChecked />
+            <div className="collapse collapse-plus" >
+              <input type="radio" name="my-accordion-3" defaultChecked className="followerchangetest"/>
               <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                 Web Development
               </div>
@@ -42,7 +42,7 @@ const WhatIDo = () => {
             </div>
             <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
             <div className="collapse collapse-plus">
-              <input type="radio" name="my-accordion-3" />
+              <input type="radio" name="my-accordion-3" className="followerchangetest"/>
               <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                 Web Design
               </div>
@@ -52,7 +52,7 @@ const WhatIDo = () => {
             </div>
             <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
             <div className="collapse collapse-plus">
-              <input type="radio" name="my-accordion-3" />
+              <input type="radio" name="my-accordion-3" className="followerchangetest"/>
               <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
                 SEO & Marketing
               </div>

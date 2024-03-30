@@ -11,7 +11,7 @@ export default function ThemeToggle() {
       <div className=" rounded-lg xl:opacity-25 hover:opacity-100 transition-opacity">
         <div className="px-2.5 rounded-md bg-[var(--background)] text-white outline-none inline-flex items-center gap-4 m-1">
           <GsapMagnetic>
-            <label className="swap swap-rotate">
+            <label className="swap swap-rotate followerchangetest">
               {/* this hidden checkbox controls the state */}
               <input type="checkbox" onClick={toggleTheme} />
 
@@ -36,66 +36,86 @@ export default function ThemeToggle() {
           </GsapMagnetic>
           <ul className="flex flex-row text-[18px] gap-4">
             <GsapMagnetic>
-              <li
-                className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
-                onClick={() => {
-                  document
-                    .getElementById("home")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Home
+              <li className="font-semibold text-[var(--primary)] p-2.5">
+                <a
+                  className="followerchangetest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    document
+                      .getElementById("home")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Home
+                </a>
               </li>
             </GsapMagnetic>
 
             <GsapMagnetic>
-              <li
-                className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
-                onClick={() => {
-                  document
-                    .getElementById("services")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Services
+              <li className="font-semibold text-[var(--primary)] p-2.5">
+                <a
+                  className="followerchangetest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    document
+                      .getElementById("services")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Services
+                </a>
               </li>
             </GsapMagnetic>
             <GsapMagnetic>
-              <li
-                className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
-                onClick={() => {
-                  document
-                    .getElementById("works")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Works
+              <li className="font-semibold text-[var(--primary)] p-2.5">
+                <a
+                  className="followerchangetest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    document
+                      .getElementById("works")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  Works
+                </a>
               </li>
             </GsapMagnetic>
             <GsapMagnetic>
-              <li
-                className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
-                onClick={() => {
-                  document
-                    .getElementById("aboutMe")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                About
+              <li className="font-semibold text-[var(--primary)] p-2.5">
+                <a
+                  className="followerchangetest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    document
+                      .getElementById("aboutMe")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  About
+                </a>
               </li>
             </GsapMagnetic>
             <GsapMagnetic>
-              <li
-                className="font-semibold text-[var(--primary)] cursor-pointer p-2.5"
-                onClick={() => {
-                  window.scrollTo({
-                    left: 0,
-                    top: document.documentElement.scrollHeight,
-                    behavior: "smooth",
-                  });
-                }}
-              >
-                Contact
+              <li className="font-semibold text-[var(--primary)] p-2.5">
+                <a
+                  className="followerchangetest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    window.scrollTo({
+                      left: 0,
+                      top: document.documentElement.scrollHeight,
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Contact
+                </a>
               </li>
             </GsapMagnetic>
           </ul>

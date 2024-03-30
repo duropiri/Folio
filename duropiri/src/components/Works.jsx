@@ -16,11 +16,14 @@ const Works = () => {
 
         <div className="flex flex-col xl:flex-row gap-[10px]">
           <div className="card rounded-none w-full xl:w-1/3">
-            <figure className="relative group h-[250px] xl:h-[500px] w-full rounded-2xl overflow-hidden">
+            <figure
+              className="relative group h-[250px] xl:h-[500px] w-full rounded-2xl overflow-hidden followerchangetest"
+              data-follower-text="View"
+              data-scale={3}
+            >
               <video
                 className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://placehold.co/3840x2160.mp4?text=Hello+World"
-                alt="Shoes"
               />
               <div className="absolute bottom-0 left-0 w-full transition-transform duration-500 transform translate-y-full group-hover:translate-y-0 bg-light-primary/10 dark:bg-dark-primary/10">
                 <div className="card-body flex-row text-dark-background justify-between">
@@ -43,11 +46,14 @@ const Works = () => {
             </figure>
           </div>
           <div className="card rounded-none w-full xl:w-1/3">
-            <figure className="relative group h-[250px] xl:h-[500px] w-full rounded-2xl overflow-hidden">
+            <figure
+              className="relative group h-[250px] xl:h-[500px] w-full rounded-2xl overflow-hidden followerchangetest"
+              data-follower-text="View"
+              data-scale={3}
+            >
               <video
                 className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://placehold.co/3840x2160.mp4?text=Hello+World"
-                alt="Shoes"
               />
               <div className="absolute bottom-0 left-0 w-full transition-transform duration-500 transform translate-y-full group-hover:translate-y-0 bg-light-primary/10 dark:bg-dark-primary/10">
                 <div className="card-body flex-row text-dark-background justify-between">
@@ -70,11 +76,14 @@ const Works = () => {
             </figure>
           </div>
           <div className="card rounded-none w-full xl:w-1/3">
-            <figure className="relative group h-[250px] xl:h-[500px] w-full rounded-2xl overflow-hidden">
+            <figure
+              className="relative group h-[250px] xl:h-[500px] w-full rounded-2xl overflow-hidden followerchangetest"
+              data-follower-text="View"
+              data-scale={3}
+            >
               <video
                 className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 src="https://placehold.co/3840x2160.mp4?text=Hello+World"
-                alt="Shoes"
               />
               <div className="absolute bottom-0 left-0 w-full transition-transform duration-500 transform translate-y-full group-hover:translate-y-0 bg-light-primary/10 dark:bg-dark-primary/10">
                 <div className="card-body flex-row text-dark-background justify-between">
@@ -101,11 +110,14 @@ const Works = () => {
         <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[30px] w-full">
           <div className="flex flex-col gap-[10px] xl:gap-[30px] w-full xl:w-1/2">
             <div className="w-full h-[200px]">
-              <figure className="relative group w-full h-full rounded-2xl overflow-hidden">
+              <figure
+                className="relative group w-full h-full rounded-2xl overflow-hidden followerchangetest"
+                data-follower-text="View"
+                data-scale={3}
+              >
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   src="https://placehold.co/3840x2160.mp4?text=Hello+World"
-                  alt="Shoes"
                 />
                 <div className="absolute bottom-0 left-0 w-full transition-transform duration-500 transform translate-y-full group-hover:translate-y-0 bg-light-primary/10 dark:bg-dark-primary/10">
                   <div className="card-body flex-row text-dark-background justify-between">
@@ -128,11 +140,14 @@ const Works = () => {
               </figure>
             </div>
             <div className="w-full h-[200px]">
-              <figure className="relative group w-full h-full rounded-2xl overflow-hidden">
+              <figure
+                className="relative group w-full h-full rounded-2xl overflow-hidden followerchangetest"
+                data-follower-text="View"
+                data-scale={3}
+              >
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   src="https://placehold.co/3840x2160.mp4?text=Hello+World"
-                  alt="Shoes"
                 />
                 <div className="absolute bottom-0 left-0 w-full transition-transform duration-500 transform translate-y-full group-hover:translate-y-0 bg-light-primary/10 dark:bg-dark-primary/10">
                   <div className="card-body flex-row text-dark-background justify-between">
@@ -158,12 +173,15 @@ const Works = () => {
 
           <p className="body-text items-start flex justify-start w-full relative text-light-background dark:text-dark-background">
             <span aria-hidden="true">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Dive into a curated showcase of transformative digital projects.
+              Each piece represents a unique solution sculpted to enhance brand
+              presence and drive engagement. From intuitive interfaces to robust
+              back-end architectures, these works embody a fusion of aesthetics
+              and functionality—crafted to navigate the complexities of the
+              digital landscape and propel businesses towards growth and
+              success. Experience the synergy of design and technology, where
+              every click leads to a story of collaboration, innovation, and
+              results that speak for themselves.
             </span>
           </p>
         </div>
