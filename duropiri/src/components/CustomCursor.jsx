@@ -8,20 +8,20 @@ export default function CustomCursor() {
 
   useEffect(() => {
     // Initialize cursor hidden and centered
-    gsap.set(cursorRef.current, { xPercent: -50, yPercent: -50, autoAlpha: 0 });
+    gsap.set(cursorRef.current, { xPercent: -50, yPercent: -50 });
 
     // Smoothly follow the mouse
     const xTo = gsap.quickTo(cursorRef.current, "x", {
-        duration: 0.4,
+        duration: 0.1,
         ease: "power3.out",
       }),
       yTo = gsap.quickTo(cursorRef.current, "y", {
-        duration: 0.4,
+        duration: 0.1,
         ease: "power3.out",
       });
 
     const moveCursor = (e) => {
-      gsap.to(cursorRef.current, { autoAlpha: 1 }); // Show cursor
+    //   gsap.to(cursorRef.current, { autoAlpha: 1 }); // Show cursor
       xTo(e.clientX);
       yTo(e.clientY);
     };
@@ -40,6 +40,7 @@ export default function CustomCursor() {
         gsap.to(cursorRef.current, {
           scale: parseFloat(scale), // Use the custom scale
           ease: "power3.out",
+          autoAlpha: 0.5,
           duration: 0.75,
           overwrite: "auto",
         });
@@ -50,37 +51,39 @@ export default function CustomCursor() {
         gsap.to(cursorRef.current, {
           scale: 1, // Revert to original size
           ease: "power3.out",
+          autoAlpha: 1,
           duration: 0.3,
           overwrite: "auto",
         });
       });
     });
 
-// Hover over elements that change the cursor shape (text fields)
-document.querySelectorAll('.text-field-hover').forEach(el => {
-    el.addEventListener('mouseenter', () => {
+    // Hover over elements that change the cursor shape (text fields)
+    document.querySelectorAll(".text-field-hover").forEach((el) => {
+      el.addEventListener("mouseenter", () => {
         gsap.to(cursorRef.current, {
-            width: '7.5px',  // Width of the rectangle
-            height: '32px',  // Height of the rectangle
-            borderRadius: '3px',  // Adjust for slightly rounded corners
-            ease: 'power3.out',
-            duration: 0.5,
-            overwrite: 'auto'
+          width: "7.5px", // Width of the rectangle
+          height: "32px", // Height of the rectangle
+          borderRadius: "3px", // Adjust for slightly rounded corners
+          ease: "power3.out",
+          autoAlpha: 0.5,
+          duration: 0.5,
+          overwrite: "auto",
         });
-    });
+      });
 
-    el.addEventListener('mouseleave', () => {
+      el.addEventListener("mouseleave", () => {
         gsap.to(cursorRef.current, {
-            width: '32px',  // Original width of the cursor
-            height: '32px',  // Original height of the cursor
-            borderRadius: '50%',  // Back to circle shape
-            ease: 'power3.out',
-            duration: 0.5,
-            overwrite: 'auto'
+          width: "32px", // Original width of the cursor
+          height: "32px", // Original height of the cursor
+          borderRadius: "50%", // Back to circle shape
+          ease: "power3.out",
+          autoAlpha: 1,
+          duration: 0.5,
+          overwrite: "auto",
         });
+      });
     });
-});
-
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
@@ -90,7 +93,7 @@ document.querySelectorAll('.text-field-hover').forEach(el => {
   return (
     <div
       ref={cursorRef}
-      className="fixed w-8 h-8 rounded-full bg-light-accent/50 dark:bg-dark-accent/50 pointer-events-none flex items-center justify-center"
+      className="fixed w-8 h-8 rounded-full bg-light-accent dark:bg-dark-accent pointer-events-none flex items-center justify-center"
       style={{ zIndex: 9999 }}
     >
       <span

@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { Parallax } from "./Parallax";
 import GsapMagnetic from "./GsapMagnetic";
 import { Input, TextField, TextareaAutosize } from "@mui/material";
+import ScrambleText from "./ScrambleText";
 
 const Contact = () => {
   return (
@@ -58,7 +59,7 @@ const Contact = () => {
                                 .scrollIntoView({ behavior: "smooth" })
                             }
                           >
-                            Home
+                            <ScrambleText text="Home" />
                           </a>
                         </li>
 
@@ -73,7 +74,7 @@ const Contact = () => {
                                 .scrollIntoView({ behavior: "smooth" })
                             }
                           >
-                            Services
+                            <ScrambleText text="Services" />
                           </a>
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
@@ -87,7 +88,7 @@ const Contact = () => {
                                 .scrollIntoView({ behavior: "smooth" })
                             }
                           >
-                            Works
+                            <ScrambleText text="Works" />
                           </a>
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
@@ -101,7 +102,7 @@ const Contact = () => {
                                 .scrollIntoView({ behavior: "smooth" })
                             }
                           >
-                            About
+                            <ScrambleText text="About" />
                           </a>
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
@@ -115,7 +116,7 @@ const Contact = () => {
                                 .scrollIntoView({ behavior: "smooth" })
                             }
                           >
-                            Contact
+                            <ScrambleText text="Contact" />
                           </a>
                         </li>
                       </ul>
@@ -252,7 +253,7 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            YouTube
+                            <ScrambleText text="YouTube" />
                           </a>
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
@@ -262,7 +263,7 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Github
+                            <ScrambleText text="Github" />
                           </a>
                         </li>
                       </ul>
