@@ -15,20 +15,33 @@ export default function GsapMagnetic({ children, speed = 2 }) {
       ease: "power3.out",
     });
 
-    magnetic.current.addEventListener("mousemove", (e) => {
+    const moveHandler = (e) => {
       const { clientX, clientY } = e;
-      const { height, width, left, top } =
-        magnetic.current.getBoundingClientRect();
+      const { height, width, left, top } = magnetic.current.getBoundingClientRect();
       const x = clientX - (left + width / 2);
       const y = clientY - (top + height / 2);
       xTo(x);
       yTo(y);
-    });
-    magnetic.current.addEventListener("mouseleave", (e) => {
-      xTo(0);
-      yTo(0);
-    });
-  }, []);
+    };
+
+    const leaveOrClickHandler = () => {
+      setTimeout(() => {
+        xTo(0);
+        yTo(0);
+      }, 100); // Delay in milliseconds before the element moves back to its original position
+    };
+
+    magnetic.current.addEventListener("mousemove", moveHandler);
+    magnetic.current.addEventListener("mouseleave", leaveOrClickHandler);
+    // Adding event listener for mouse click to trigger the element moving back
+    magnetic.current.addEventListener("click", leaveOrClickHandler);
+
+    return () => {
+      magnetic.current.removeEventListener("mousemove", moveHandler);
+      magnetic.current.removeEventListener("mouseleave", leaveOrClickHandler);
+      magnetic.current.removeEventListener("click", leaveOrClickHandler);
+    };
+  }, [speed]);
 
   return React.cloneElement(children, { ref: magnetic });
 }
