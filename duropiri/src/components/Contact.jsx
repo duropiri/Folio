@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import Footer from "./Footer";
-import { Parallax } from "./Parallax";
 import GsapMagnetic from "./GsapMagnetic";
-import { Input, TextField, TextareaAutosize } from "@mui/material";
 import ScrambleText from "./ScrambleText";
 
 const Contact = () => {

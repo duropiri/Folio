@@ -1,6 +1,6 @@
 import React from "react";
 import { TechStack } from "./TechStack";
-import { Parallax } from "./Parallax";
+import ScrambleText from "./ScrambleText";
 
 const WhatIDo = () => {
   return (
@@ -31,33 +31,59 @@ const WhatIDo = () => {
 
           {/* Accordion */}
           <div className="flex flex-col w-full xl:w-1/2 py-[25px]">
-            <div className="collapse collapse-plus" >
-              <input type="radio" name="my-accordion-3" defaultChecked className="followerchangetest"/>
+            <div className="collapse collapse-plus">
+              <input
+                type="radio"
+                name="my-accordion-3"
+                defaultChecked
+                className="followerchangetest"
+              />
               <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                Web Development
+                <ScrambleText text="Web Development" />
               </div>
               <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
-                <p>I create unique, custom-coded websites that are tailored to your brand. I focus on scalability, performance, accessibility, and engaging animations for a memorable experience.</p>
+                <p>
+                  I create unique, custom-coded websites that are tailored to
+                  your brand. I focus on scalability, performance,
+                  accessibility, and engaging animations for a memorable
+                  experience.
+                </p>
               </div>
             </div>
             <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
             <div className="collapse collapse-plus">
-              <input type="radio" name="my-accordion-3" className="followerchangetest"/>
+              <input
+                type="radio"
+                name="my-accordion-3"
+                className="followerchangetest"
+              />
               <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                Web Design
+                <ScrambleText text="Web Design" />
               </div>
               <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
-                <p>I design user-centric websites that enhance your brand and drive business goals. Clean typography and minimal layouts has my full attention to create a compelling online presence.</p>
+                <p>
+                  I design user-centric websites that enhance your brand and
+                  drive business goals. Clean typography and minimal layouts has
+                  my full attention to create a compelling online presence.
+                </p>
               </div>
             </div>
             <div className="w-full h-[2px] bg-light-background dark:bg-dark-background"></div>
             <div className="collapse collapse-plus">
-              <input type="radio" name="my-accordion-3" className="followerchangetest"/>
+              <input
+                type="radio"
+                name="my-accordion-3"
+                className="followerchangetest"
+              />
               <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
-                SEO & Marketing
+                <ScrambleText text="SEO & Marketing" />
               </div>
               <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
-                <p>Beyond crafting visually memorable websites, I also optimize your online presence to elevate your visibility in search rankings so your voices can be heard in the digital landscape.</p>
+                <p>
+                  Beyond crafting visually memorable websites, I also optimize
+                  your online presence to elevate your visibility in search
+                  rankings so your voices can be heard in the digital landscape.
+                </p>
               </div>
             </div>
           </div>

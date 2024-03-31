@@ -1,13 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Parallax } from "@/components/Parallax";
 import { ScrollTriggeredAnimation } from "./ScrollTriggeredAnimation";
 import { useTheme } from "@/components/ThemeContext";
 
 const Hero = () => {
   const { navbarHeight } = useTheme();
-
-  console.log("Navbar Height: " + navbarHeight);
 
   return (
     <section className="flex items-end sm:items-center section-padding sticky top-0 custom-height z-0">
@@ -59,7 +56,6 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      {/* <Parallax speed={4} endOpacity={1} className="w-full h-full z-10 relative"> */}
       <ScrollTriggeredAnimation
         className="w-full h-full z-10"
         fade={0}
@@ -83,7 +79,6 @@ const Hero = () => {
           </p>
         </div>
       </ScrollTriggeredAnimation>
-      {/* </Parallax> */}
     </section>
   );
 };

@@ -1,14 +1,11 @@
 "layout.js";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
-
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeContext";
 import ThemeToggle from "@/components/Dock";
-import { Parallax } from "@/components/Parallax";
-import Contact from "@/components/Contact";
 import CustomCursor from "@/components/CustomCursor";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 export const metadata = {
   title:
     "Durotimi Duro-Pirisola | Full-Stack Developer, UI/UX Designer & Content Producer",
@@ -24,6 +21,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html lang="en">
         <body className="dark">
+          <SpeedInsights />
           <CustomCursor />
           <div className="texture-overlay"></div>
           <div className="flex flex-col">

@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
-import ScrollArrow from "./ScrollArrow";
 import AboutMe from "./AboutMe";
 import WhatIDo from "./Services";
 import Works from "./Works";
-import { Parallax } from "./Parallax";
 
 const Body = () => {
   return (

@@ -54,11 +54,9 @@
 
   a,
   label,
-  div,
   input,
   textarea,
-  button
-  {
+  button {
     cursor: none !important;
   }
 
@@ -279,6 +277,28 @@ body {
   transition: transform 0.2s ease-out;
 }
 
+@media (min-width: 560px) {
+  .hero-text {
+    font-weight: bold;
+    font-size: 128px;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 640px) {
+  .navigation-text {
+    font-size: 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    font-weight: bold;
+    font-size: 180px;
+    line-height: 150px;
+  }
+}
+
 @media (min-width: 1024px) {
   .section-padding {
     padding-left: 50px;
@@ -305,7 +325,7 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1600px) {
   .section-padding {
     padding-left: 150px;
     padding-right: 150px;
@@ -320,27 +340,5 @@ body {
   .section-padding {
     padding-left: 250px;
     padding-right: 250px;
-  }
-}
-
-@media (min-width: 560px) {
-  .hero-text {
-    font-weight: bold;
-    font-size: 128px;
-    line-height: 100px;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-text {
-    font-weight: bold;
-    font-size: 180px;
-    line-height: 150px;
-  }
-}
-
-@media (min-width: 640px) {
-  .navigation-text {
-    font-size: 64px;
   }
 }
