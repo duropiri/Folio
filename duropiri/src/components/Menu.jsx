@@ -19,7 +19,7 @@ const Menu = ({}) => {
       <div
         className={`flex h-[100px] justify-end items-center z-50 ${labelPositionClass}`}
       >
-        <label className="btn btn-circle swap swap-rotate bg-black/0 border-none">
+        <label className="btn btn-circle swap swap-rotate bg-light-secondary/0 dark:bg-dark-secondary/0 hover:bg-light-secondary/25 dark:hover:bg-dark-secondary/25 border-none">
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"
