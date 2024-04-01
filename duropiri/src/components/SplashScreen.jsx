@@ -6,8 +6,12 @@ import Logo from "./Logo";
 const SplashScreen = ({ finishLoading }) => {
   const circleRef = useRef(null);
   const logoRef = useRef(null);
+  const loadingBarRef = useRef(null);
 
   useEffect(() => {
+    // Initial setup for the loading bar
+    gsap.set(loadingBarRef.current, { scaleX: 0, transformOrigin: "left", autoAlpha: 1 });
+
     // Animate the pulsating of the logo, then shrinking of the circle and logo
     const timeline = gsap.timeline({
       defaults: { ease: "power2.inOut" },
@@ -27,7 +31,21 @@ const SplashScreen = ({ finishLoading }) => {
         ease: "power1.inOut",
       });
 
-    // After the pulsate, proceed to shrink the logo and circle
+    // Loading bar animation to fill up concurrently with the logo pulsate
+    timeline.to(loadingBarRef.current, {
+      scaleX: 1,
+      duration: 0.8,
+      ease: "none",
+    }, "0");
+
+    // Fade out the loading bar before proceeding with the shrinking animations
+    timeline.to(loadingBarRef.current, {
+      autoAlpha: 0,
+      duration: 0.4,
+      ease: "power1.inOut",
+    });
+
+    // After the loading bar fades out, proceed to shrink the logo and circle
     timeline
       .to(logoRef.current, {
         scale: 0,
@@ -44,7 +62,7 @@ const SplashScreen = ({ finishLoading }) => {
   }, [finishLoading]);
 
   return (
-    <div className="fixed inset-0 overflow-hidden z-[999] flex items-center justify-center bg-transparent">
+    <div className="fixed inset-0 overflow-hidden z-[99999] flex flex-col items-center justify-center bg-transparent">
       {/* The circle, styled to be large and circular immediately */}
       <div ref={circleRef} className="absolute top-1/2 left-1/2 bg-light-background dark:bg-dark-background" style={{
         borderRadius: '50%',
@@ -53,8 +71,12 @@ const SplashScreen = ({ finishLoading }) => {
         transform: 'translate(-50%, -50%)',
       }}></div>
       {/* The logo, centered */}
-      <div ref={logoRef}>
+      <div ref={logoRef} className="z-10 select-none pointer-events-none">
         <Logo />
+      </div>
+      {/* Loading bar */}
+      <div className="absolute bottom-10 w-full px-20">
+        <div ref={loadingBarRef} className="h-1 w-full bg-light-primary dark:bg-dark-primary"></div>
       </div>
     </div>
   );

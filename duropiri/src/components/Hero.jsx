@@ -78,7 +78,7 @@ const Hero = () => {
             </li>
           </ul>
           {/* Description */}
-          <p className="font-medium body-text text-light-primary dark:text-dark-primary leading-snug lg:w-4/5">
+          <p className="font-medium body-text text-light-primary dark:text-dark-primary leading-snug lg:w-4/5 max-w-[50ch]">
             A Full Stack Developer & Marketing Specialist helping business
             owners leverage proven, results-driven systems.
           </p>

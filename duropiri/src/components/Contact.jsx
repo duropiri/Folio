@@ -142,7 +142,7 @@ const Contact = () => {
                                 <li>
                                   <a
                                     className="followerchangetest"
-                                    href="https://www.linkedin.com/in/duro-p-045817244/"
+                                    href="https://www.linkedin.com/in/duropiri/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                   >
@@ -276,7 +276,7 @@ const Contact = () => {
                       <label className="input input-bordered flex pl-0 pr-0 sm:pl-4 sm:pr-4 items-center gap-2 bg-transparent border-0 border-r-2 border-b-2 text-[16px] border-light-primary dark:border-dark-primary">
                         <input
                           type="text"
-                          className="grow text-light-primary dark:text-dark-primary text-field-hover"
+                          className="grow text-light-primary dark:text-dark-primary placeholder:text-light-primary/50 dark:placeholder:text-dark-primary/50 text-field-hover"
                           placeholder="Your name"
                         />
                       </label>
@@ -294,7 +294,7 @@ const Contact = () => {
                         </svg>
                         <input
                           type="text"
-                          className="grow text-light-primary dark:text-dark-primary text-field-hover"
+                          className="grow text-light-primary dark:text-dark-primary placeholder:text-light-primary/50 dark:placeholder:text-dark-primary/50 text-field-hover"
                           placeholder="Your email"
                         />
                       </label>
@@ -302,7 +302,7 @@ const Contact = () => {
                   </div>
                   <div className="w-full h-full">
                     <textarea
-                      className="textarea bg-transparent border-0 border-r-2 border-b-2 w-full h-full text-[16px] text-light-primary dark:text-dark-primary border-light-primary dark:border-dark-primary text-field-hover"
+                      className="textarea bg-transparent border-0 border-r-2 border-b-2 w-full h-full text-[16px] text-light-primary dark:text-dark-primary border-light-primary dark:border-dark-primary placeholder:text-light-primary/50 dark:placeholder:text-dark-primary/50 text-field-hover"
                       placeholder="Your message..."
                     ></textarea>
                   </div>
@@ -312,7 +312,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="z-50 select-none">
+      <div className="z-50">
         <Footer />
       </div>
     </>

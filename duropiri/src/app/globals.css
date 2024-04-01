@@ -19,7 +19,7 @@
     background-size: auto;
     background-repeat: repeat;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 999999;
     opacity: 0.05;
     filter: contrast(110%) brightness(1000%);
   }
@@ -32,13 +32,6 @@
     @apply bg-dark-background; /* Dark mode background color */
   }
 
-  a,
-  label,
-  input,
-  textarea,
-  button {
-    /* cursor: none !important; */
-  }
 
   html {
     @apply text-light-text;
@@ -245,7 +238,7 @@ body {
   }
 
   .section-heading {
-    font-size: 112px;
+    font-size: 64px;
   }
 
   .section-subheading {
@@ -253,7 +246,7 @@ body {
   }
 
   .body-text {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   /* Assuming 'lg' breakpoint is at 1024px */
@@ -282,7 +275,7 @@ body {
   }
 
   .section-heading {
-    font-size: 156px;
+    font-size: 128px;
   }
 
   a,

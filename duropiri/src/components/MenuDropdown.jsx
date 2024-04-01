@@ -185,7 +185,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
           <li>
             <a
               className="followerchangetest"
-              href="https://www.linkedin.com/in/duro-p-045817244/"
+              href="https://www.linkedin.com/in/duropiri/"
               target="_blank"
               rel="noopener noreferrer"
             >

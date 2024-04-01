@@ -19,7 +19,7 @@ export default function Home() {
     // This ensures that any initialization or preloading logic can run here
     // For simplicity, this is just immediately set to false after a delay to simulate loading
     if (isLoading) {
-      setTimeout(() => setIsLoading(false), 4000); // Simulate loading time
+      setTimeout(() => setIsLoading(false), 5000); // Simulate loading time
     }
   }, [isLoading]);
 

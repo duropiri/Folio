@@ -38,7 +38,7 @@ const WhatIDo = () => {
                 defaultChecked
                 className="followerchangetest"
               />
-              <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
+              <div className="collapse-title text-[32px] lg:text-[48px] font-medium text-light-background dark:text-dark-background">
                 <ScrambleText text="Web Development" />
               </div>
               <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
@@ -57,7 +57,7 @@ const WhatIDo = () => {
                 name="my-accordion-3"
                 className="followerchangetest"
               />
-              <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
+              <div className="collapse-title text-[32px] lg:text-[48px] font-medium text-light-background dark:text-dark-background">
                 <ScrambleText text="Web Design" />
               </div>
               <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">
@@ -75,7 +75,7 @@ const WhatIDo = () => {
                 name="my-accordion-3"
                 className="followerchangetest"
               />
-              <div className="collapse-title text-[32px] lg:text-[56px] font-medium text-light-background dark:text-dark-background">
+              <div className="collapse-title text-[32px] lg:text-[48px] font-medium text-light-background dark:text-dark-background">
                 <ScrambleText text="SEO & Marketing" />
               </div>
               <div className="collapse-content body-text items-start flex justify-start w-full relative max-w-[40ch] text-light-background dark:text-dark-background">

@@ -41,7 +41,7 @@ export default function CustomCursor() {
           scale: parseFloat(scale), // Use the custom scale
           ease: "power3.out",
           autoAlpha: 0.5,
-          duration: 0.75,
+          duration: 0.2,
           overwrite: "auto",
         });
       });
@@ -52,7 +52,7 @@ export default function CustomCursor() {
           scale: 1, // Revert to original size
           ease: "power3.out",
           autoAlpha: 1,
-          duration: 0.3,
+          duration: 0.2,
           overwrite: "auto",
         });
       });
@@ -62,24 +62,24 @@ export default function CustomCursor() {
     document.querySelectorAll(".text-field-hover").forEach((el) => {
       el.addEventListener("mouseenter", () => {
         gsap.to(cursorRef.current, {
-          width: "7.5px", // Width of the rectangle
-          height: "32px", // Height of the rectangle
+          width: "5px", // Width of the rectangle
+          height: "36px", // Height of the rectangle
           borderRadius: "3px", // Adjust for slightly rounded corners
           ease: "power3.out",
           autoAlpha: 0.5,
-          duration: 0.5,
+          duration: 0.2,
           overwrite: "auto",
         });
       });
 
       el.addEventListener("mouseleave", () => {
         gsap.to(cursorRef.current, {
-          width: "32px", // Original width of the cursor
-          height: "32px", // Original height of the cursor
+          width: "24px", // Original width of the cursor
+          height: "24px", // Original height of the cursor
           borderRadius: "50%", // Back to circle shape
           ease: "power3.out",
           autoAlpha: 1,
-          duration: 0.5,
+          duration: 0.2,
           overwrite: "auto",
         });
       });
@@ -93,12 +93,12 @@ export default function CustomCursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed w-8 h-8 rounded-full bg-light-accent dark:bg-dark-accent pointer-events-none flex items-center justify-center"
+      className="fixed w-6 h-6 rounded-full bg-light-accent dark:bg-dark-accent pointer-events-none flex items-center justify-center"
       style={{ zIndex: 9999 }}
     >
       <span
         ref={followerTextRef}
-        className="text-sm font-semibold text-light-background dark:text-dark-background"
+        className="text-[8px] font-semibold text-light-background dark:text-dark-background"
       ></span>{" "}
       {/* Dynamic text */}
     </div>
