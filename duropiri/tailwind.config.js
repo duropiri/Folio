@@ -24,7 +24,50 @@ module.exports = {
           accent: "#3774a9",
         },
       },
+      textStrokeWidth: {
+        1: "1px",
+        2: "2px",
+        3: "3px",
+        4: "4px",
+        5: "5px",
+        6: "6px",
+      },
+      textStrokeColor: (theme) => ({
+        primary: theme("colors.light-primary"),
+      }),
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    // Plugin for text stroke width
+    function ({ addUtilities, theme, e }) {
+      const newUtilities = {};
+      Object.entries(theme("textStrokeWidth")).forEach(([key, value]) => {
+        newUtilities[`.text-stroke-${e(key)}`] = {
+          "-webkit-text-stroke-width": value,
+        };
+      });
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+    // Plugin for text stroke color, adjusted for light and dark modes
+    function ({ addUtilities, theme, e }) {
+      const newUtilities = {};
+
+      // Light theme colors
+      Object.entries(theme("colors.light")).forEach(([key, value]) => {
+        newUtilities[`.text-stroke-light-${e(key)}`] = {
+          "-webkit-text-stroke-color": value,
+        };
+      });
+
+      // Dark theme colors
+      Object.entries(theme("colors.dark")).forEach(([key, value]) => {
+        newUtilities[`.text-stroke-dark-${e(key)}`] = {
+          "-webkit-text-stroke-color": value,
+        };
+      });
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };

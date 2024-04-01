@@ -103,11 +103,12 @@ const WhatIDo = () => {
           </div>
 
           <div
-            id="categories"
-            className="categories flex flex-row overflow-hidden gap-[50px] h-full"
+            className="flex flex-row overflow-hidden gap-[50px] h-full relative"
           >
+            <div class="absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-light-primary dark:to-dark-primary z-10"></div>
             <TechStack />
             <TechStack />
+            <div class="absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-light-primary dark:to-dark-primary z-10"></div>
           </div>
         </div>
       </div>

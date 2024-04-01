@@ -59,16 +59,22 @@ const Hero = () => {
       <ScrollTriggeredAnimation
         className="w-full h-full z-10"
         fade={0}
-        offset={`top-=${(navbarHeight)}`}
+        offset={`top-=${navbarHeight}`}
       >
         <div className="flex flex-col h-full justify-center gap-y-3 sm:gap-y-8 items-start sm:items-start">
           {/* Title */}
           <ul className="font-khand hero-text whitespace-nowrap duration-500">
             <li className="text-light-primary dark:text-dark-primary">
-              <span className="font-outline text-transparent">Duro</span> Piri.
+              <span className="text-stroke-1 sm:text-stroke-2 lg:text-stroke-3 xl:text-stroke-4 text-stroke-light-primary dark:text-stroke-dark-primary text-transparent">
+                Duro
+              </span>{" "}
+              Piri.
             </li>
             <li className="text-light-primary dark:text-dark-primary">
-              Duro <span className="font-outline text-transparent">Piri.</span>
+              Duro{" "}
+              <span className="text-stroke-1 sm:text-stroke-2 lg:text-stroke-3 xl:text-stroke-4 text-stroke-light-primary dark:text-stroke-dark-primary text-transparent">
+                Piri.
+              </span>
             </li>
           </ul>
           {/* Description */}

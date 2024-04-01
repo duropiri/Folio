@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   return (
     <div className="flex justify-center select-none">
       <div className=" rounded-lg xl:opacity-25 hover:opacity-100 transition-opacity">
-        <div className="px-2.5 rounded-md bg-[var(--background)] text-white outline-none inline-flex items-center gap-4 m-1">
+        <div className="px-2.5 rounded-md bg-light-background dark:bg-dark-background text-white outline-none inline-flex items-center gap-4 m-1">
           <GsapMagnetic>
             <label className="swap swap-rotate followerchangetest">
               {/* this hidden checkbox controls the state */}
@@ -17,7 +17,7 @@ export default function ThemeToggle() {
 
               {/* sun icon */}
               <svg
-                className="swap-on fill-current w-6 h-6 text-[var(--primary)]"
+                className="swap-on fill-current w-6 h-6 text-light-primary dark:text-dark-primary"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -26,7 +26,7 @@ export default function ThemeToggle() {
 
               {/* moon icon */}
               <svg
-                className="swap-off fill-current w-6 h-6 text-[var(--primary)]"
+                className="swap-off fill-current w-6 h-6 text-light-primary dark:text-dark-primary"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -36,7 +36,7 @@ export default function ThemeToggle() {
           </GsapMagnetic>
           <ul className="flex flex-row text-[18px] gap-4">
             <GsapMagnetic>
-              <li className="font-semibold text-[var(--primary)] p-2.5">
+              <li className="font-semibold text-light-primary dark:text-dark-primary p-2.5">
                 <a
                   className="followerchangetest"
                   target="_blank"
@@ -53,7 +53,7 @@ export default function ThemeToggle() {
             </GsapMagnetic>
 
             <GsapMagnetic>
-              <li className="font-semibold text-[var(--primary)] p-2.5">
+              <li className="font-semibold text-light-primary dark:text-dark-primary p-2.5">
                 <a
                   className="followerchangetest"
                   target="_blank"
@@ -69,7 +69,7 @@ export default function ThemeToggle() {
               </li>
             </GsapMagnetic>
             <GsapMagnetic>
-              <li className="font-semibold text-[var(--primary)] p-2.5">
+              <li className="font-semibold text-light-primary dark:text-dark-primary p-2.5">
                 <a
                   className="followerchangetest"
                   target="_blank"
@@ -85,7 +85,7 @@ export default function ThemeToggle() {
               </li>
             </GsapMagnetic>
             <GsapMagnetic>
-              <li className="font-semibold text-[var(--primary)] p-2.5">
+              <li className="font-semibold text-light-primary dark:text-dark-primary p-2.5">
                 <a
                   className="followerchangetest"
                   target="_blank"
@@ -101,7 +101,7 @@ export default function ThemeToggle() {
               </li>
             </GsapMagnetic>
             <GsapMagnetic>
-              <li className="font-semibold text-[var(--primary)] p-2.5">
+              <li className="font-semibold text-light-primary dark:text-dark-primary p-2.5">
                 <a
                   className="followerchangetest"
                   target="_blank"

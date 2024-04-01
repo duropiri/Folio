@@ -22,16 +22,18 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className="dark">
           <SpeedInsights />
-          <div className="hidden xl:block">
-            <CustomCursor />
-          </div>
-          <div className="texture-overlay"></div>
-          <div className="flex flex-col">
-            <SmoothScrolling>{children}</SmoothScrolling>
-          </div>
-          <div className="fixed inset-x-0 bottom-1 z-50 xl:block hidden shadow-lg">
-            <ThemeToggle />
-          </div>
+          <>
+            <div className="hidden xl:block">
+              <CustomCursor />
+            </div>
+            <div className="texture-overlay"></div>
+            <div className="flex flex-col">
+              <SmoothScrolling>{children}</SmoothScrolling>
+            </div>
+            <div className="fixed inset-x-0 bottom-1 z-50 xl:block hidden shadow-lg">
+              <ThemeToggle />
+            </div>
+          </>
         </body>
       </html>
     </ThemeProvider>
