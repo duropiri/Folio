@@ -10,18 +10,18 @@ module.exports = {
     extend: {
       colors: {
         dark: {
-          text: "#eef0f1",
-          background: "#06080a",
-          primary: "#aac0d3",
-          secondary: "#315574",
-          accent: "#5793c8",
+          text: "rgb(255, 255, 255)",
+          background: "rgb(0, 0, 0)",
+          primary: "rgb(255, 255, 255)",
+          secondary: "rgb(49, 85, 116)",
+          accent: "rgb(87, 147, 200)",
         },
         light: {
-          text: "#0e1011",
-          background: "#f5f7f9",
-          primary: "#2b4154",
-          secondary: "#8cb0cf",
-          accent: "#3774a9",
+          text: "rgb(0, 0, 0)",
+          background: "rgb(255, 255, 255)",
+          primary: "rgb(0, 0, 0)",
+          secondary: "rgb(140, 176, 207)",
+          accent: "rgb(55, 116, 169)",
         },
       },
       textStrokeWidth: {

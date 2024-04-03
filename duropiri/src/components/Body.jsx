@@ -6,25 +6,25 @@ import Works from "./Works";
 
 const Body = () => {
   return (
-    <div className="relative overflow-x-clip w-full min-h-screen z-20">
+    <div className="relative overflow-x-clip overflow-y-clip w-full min-h-screen z-20 rounded-t-3xl rounded-b-3xl border-light-primary dark:border-dark-primary border-4 bg-light-primary dark:bg-dark-primary">
       {/* What I Do Section */}
       <section
         id="services"
-        className="bg-light-primary dark:bg-dark-primary section-padding rounded-t-3xl"
+        className=" section-padding"
       >
         <WhatIDo />
       </section>
       {/* Selected Works */}
       <section
         id="works"
-        className="bg-light-primary dark:bg-dark-primary section-padding "
+        className="section-padding "
       >
         <Works />
       </section>
       {/* About Me Section */}
       <section
         id="aboutMe"
-        className="bg-light-primary dark:bg-dark-primary section-padding rounded-b-3xl"
+        className="section-padding"
       >
         <AboutMe />
       </section>

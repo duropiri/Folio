@@ -79,8 +79,9 @@ const Hero = () => {
           </ul>
           {/* Description */}
           <p className="font-medium body-text text-light-primary dark:text-dark-primary leading-snug lg:w-4/5 max-w-[50ch]">
-            A Full Stack Developer & Marketing Specialist helping business
-            owners leverage proven, results-driven systems.
+            A <span class="font-bold underline">Full Stack Developer</span>{" "}&{" "}
+            <span class="font-bold underline">Marketing Specialist</span> helping business owners leverage proven,
+            results-driven systems.
           </p>
         </div>
       </ScrollTriggeredAnimation>

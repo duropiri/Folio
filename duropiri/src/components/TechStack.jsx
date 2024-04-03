@@ -11,14 +11,14 @@ export const TechStack = () => {
         <p className="text-[16px] font-semibold text-light-background dark:text-dark-background w-full">
           Programming Languages.
         </p>
-        <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+        <ul className="flex flex-row text-dark-primary dark:text-light-primary w-full gap-[10px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             Python
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             Java
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             JavaScript
           </li>
         </ul>
@@ -28,23 +28,23 @@ export const TechStack = () => {
         <p className="text-[16px] font-semibold text-light-background dark:text-dark-background w-full">
           Frontend Technologies.
         </p>
-        <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+        <ul className="flex flex-row text-dark-primary dark:text-light-primary w-full gap-[10px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             ReactJS
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             TailwindCSS
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             GSAP
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             Figma
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             CSS
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             HTML
           </li>
         </ul>
@@ -54,11 +54,11 @@ export const TechStack = () => {
         <p className="text-[16px] font-semibold text-light-background dark:text-dark-background w-full">
           Backend Technologies.
         </p>
-        <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+        <ul className="flex flex-row text-dark-primary dark:text-light-primary w-full gap-[10px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             NodeJS
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             Docker
           </li>
         </ul>
@@ -68,8 +68,8 @@ export const TechStack = () => {
         <p className="text-[16px] font-semibold text-light-background dark:text-dark-background w-full">
           DBMS.
         </p>
-        <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+        <ul className="flex flex-row text-dark-primary dark:text-light-primary w-full gap-[10px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             MySQL
           </li>
         </ul>
@@ -79,11 +79,11 @@ export const TechStack = () => {
         <p className="text-[16px] font-semibold text-light-background dark:text-dark-background w-full">
           DevOps and Cloud.
         </p>
-        <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+        <ul className="flex flex-row text-dark-primary dark:text-light-primary w-full gap-[10px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             AWS
           </li>
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             Docker
           </li>
         </ul>
@@ -93,8 +93,8 @@ export const TechStack = () => {
         <p className="text-[16px] font-semibold text-light-background dark:text-dark-background w-full">
           Version Control.
         </p>
-        <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+        <ul className="flex flex-row text-dark-primary dark:text-light-primary w-full gap-[10px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             Git
           </li>
         </ul>
@@ -104,8 +104,8 @@ export const TechStack = () => {
         <p className="text-[16px] font-semibold text-light-background dark:text-dark-background w-full">
           Other.
         </p>
-        <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-          <li className="badge badge-outline h-full text-[18px] font-medium bg-light-background dark:bg-dark-background py-[10px] px-[25px]">
+        <ul className="flex flex-row text-dark-primary dark:text-light-primary w-full gap-[10px]">
+          <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
             Agile Scrum/Waterfall methodology
           </li>
         </ul>

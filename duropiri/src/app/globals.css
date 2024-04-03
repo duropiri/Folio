@@ -26,25 +26,9 @@
 
   body {
     @apply bg-light-background; /* Light mode background color */
-    @apply text-light-text;
   }
   .dark {
     @apply bg-dark-background; /* Dark mode background color */
-  }
-
-
-  html {
-    @apply text-light-text;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    html {
-      @apply text-dark-text;
-    }
-
-    body {
-      @apply text-dark-text;
-    }
   }
 }
 
@@ -140,6 +124,17 @@ body {
   line-height: 1.375;
   text-wrap: balance;
 }
+
+.logo {
+  @apply text-light-text;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    @apply text-dark-text;
+  }
+}
+
 
 .magnetic-button {
   position: relative;
