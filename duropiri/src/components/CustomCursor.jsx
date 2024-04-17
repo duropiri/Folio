@@ -12,11 +12,11 @@ export default function CustomCursor() {
 
     // Smoothly follow the mouse
     const xTo = gsap.quickTo(cursorRef.current, "x", {
-        duration: 0.1,
+        duration: 0.5,
         ease: "power3.out",
       }),
       yTo = gsap.quickTo(cursorRef.current, "y", {
-        duration: 0.1,
+        duration: 0.5,
         ease: "power3.out",
       });
 
@@ -94,7 +94,7 @@ export default function CustomCursor() {
     <div
       ref={cursorRef}
       className="fixed w-6 h-6 rounded-full bg-light-accent dark:bg-dark-accent pointer-events-none flex items-center justify-center"
-      style={{ zIndex: 9999 }}
+      style={{ zIndex: 0 }}
     >
       <span
         ref={followerTextRef}

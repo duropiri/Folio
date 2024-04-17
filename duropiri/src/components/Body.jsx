@@ -6,7 +6,7 @@ import Works from "./Works";
 
 const Body = () => {
   return (
-    <div className="relative overflow-x-clip overflow-y-clip w-full min-h-screen z-20 rounded-t-3xl rounded-b-3xl bg-dark-primary dark:bg-light-primary">
+    <div className="relative overflow-x-clip overflow-y-clip w-full min-h-screen z-20 rounded-t-3xl rounded-b-3xl bg-dark-primary/90 dark:bg-light-primary/90">
       {/* What I Do Section */}
       <section
         id="services"

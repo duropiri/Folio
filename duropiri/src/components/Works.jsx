@@ -7,9 +7,9 @@ const Works = () => {
     <div className="relative w-full h-full">
       <div className="flex flex-col justify-start z-10 gap-[10px]">
         <div className="end-to-end w-screen">
-          <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div>
+          {/* <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
           <ScrollingBanner baseVelocity={-100}>Works.</ScrollingBanner>
-          <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div>
+          {/* <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
         </div>
 
 

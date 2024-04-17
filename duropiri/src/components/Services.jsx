@@ -10,9 +10,9 @@ const WhatIDo = () => {
       {/* Content */}
       <div className="flex flex-col justify-start gap-[50px] xl:gap-[100px] z-10">
         <div className="end-to-end w-screen">
-          <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div>
+          {/* <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
           <ScrollingBanner baseVelocity={-100}>Services.</ScrollingBanner>
-          <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div>
+          {/* <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
         </div>
         <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[25px]">
           {/* Title & Description */}
@@ -104,7 +104,7 @@ const WhatIDo = () => {
           </div>
 
           <div className="end-to-end flex flex-row overflow-hidden gap-[50px] h-full relative">
-            <div class="absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div>
+            {/* <div class="absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
 
             <Marquee>
               {/* Programming languages */}
@@ -113,13 +113,13 @@ const WhatIDo = () => {
                   Programming Languages.
                 </p>
                 <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     Python
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     Java
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     JavaScript
                   </li>
                 </ul>
@@ -130,22 +130,22 @@ const WhatIDo = () => {
                   Frontend Technologies.
                 </p>
                 <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     ReactJS
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     TailwindCSS
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     GSAP
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     Figma
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     CSS
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     HTML
                   </li>
                 </ul>
@@ -156,10 +156,10 @@ const WhatIDo = () => {
                   Backend Technologies.
                 </p>
                 <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     NodeJS
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     Docker
                   </li>
                 </ul>
@@ -170,7 +170,7 @@ const WhatIDo = () => {
                   DBMS.
                 </p>
                 <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     MySQL
                   </li>
                 </ul>
@@ -181,10 +181,10 @@ const WhatIDo = () => {
                   DevOps and Cloud.
                 </p>
                 <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     AWS
                   </li>
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     Docker
                   </li>
                 </ul>
@@ -195,7 +195,7 @@ const WhatIDo = () => {
                   Version Control.
                 </p>
                 <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     Git
                   </li>
                 </ul>
@@ -206,13 +206,13 @@ const WhatIDo = () => {
                   Other.
                 </p>
                 <ul className="flex flex-row text-light-primary dark:text-dark-primary w-full gap-[10px]">
-                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px]">
+                  <li className="badge badge-outline h-full text-[18px] font-medium  py-[10px] px-[25px] hover:dark:text-light-primary hover:dark:bg-dark-primary hover:text-dark-primary hover:bg-light-primary">
                     Agile Scrum/Waterfall methodology
                   </li>
                 </ul>
               </div>
             </Marquee>
-            <div class="absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div>
+            {/* <div class="absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
           </div>
         </div>
       </div>
