@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="bg-dark-primary h-[2px] w-full"></div>
+      <div className="bg-light-primary dark:bg-dark-primary h-[2px] w-full"></div>
     </div>
   );
 };
