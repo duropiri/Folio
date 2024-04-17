@@ -6,7 +6,7 @@ import Works from "./Works";
 
 const Body = () => {
   return (
-    <div className="relative overflow-x-clip overflow-y-clip w-full min-h-screen z-20 rounded-t-3xl rounded-b-3xl border-light-primary dark:border-dark-primary border-4 bg-light-primary dark:bg-dark-primary">
+    <div className="relative overflow-x-clip overflow-y-clip w-full min-h-screen z-20 rounded-t-3xl rounded-b-3xl bg-dark-primary dark:bg-light-primary">
       {/* What I Do Section */}
       <section
         id="services"
@@ -22,12 +22,12 @@ const Body = () => {
         <Works />
       </section>
       {/* About Me Section */}
-      <section
+      {/* <section
         id="aboutMe"
         className="section-padding"
       >
         <AboutMe />
-      </section>
+      </section> */}
     </div>
   );
 };
