@@ -17,7 +17,8 @@ export default function GsapMagnetic({ children, speed = 2 }) {
 
     const moveHandler = (e) => {
       const { clientX, clientY } = e;
-      const { height, width, left, top } = magnetic.current.getBoundingClientRect();
+      const { height, width, left, top } =
+        magnetic.current.getBoundingClientRect();
       const x = clientX - (left + width / 2);
       const y = clientY - (top + height / 2);
       xTo(x);
@@ -37,9 +38,11 @@ export default function GsapMagnetic({ children, speed = 2 }) {
     magnetic.current.addEventListener("click", leaveOrClickHandler);
 
     return () => {
-      magnetic.current.removeEventListener("mousemove", moveHandler);
-      magnetic.current.removeEventListener("mouseleave", leaveOrClickHandler);
-      magnetic.current.removeEventListener("click", leaveOrClickHandler);
+      if (magnetic.current) {
+        magnetic.current.removeEventListener("mousemove", moveHandler);
+        magnetic.current.removeEventListener("mouseleave", leaveOrClickHandler);
+        magnetic.current.removeEventListener("click", leaveOrClickHandler);
+      }
     };
   }, [speed]);
 

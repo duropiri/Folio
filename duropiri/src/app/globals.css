@@ -1,3 +1,6 @@
+@import url("/duropiri/public/fonts/Khand/WEB/css/khand.css");
+@import url("/duropiri/public/fonts/GeneralSans/WEB/css/general-sans.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,7 +59,7 @@
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  font-family: "General Sans", sans-serif;
+  font-family: "GeneralSans", sans-serif;
 }
 
 .body-text {
@@ -91,7 +94,7 @@ body {
 }
 
 .font-generalsans {
-  font-family: "General Sans", sans-serif;
+  font-family: "GeneralSans", sans-serif;
 }
 
 .header-text {
