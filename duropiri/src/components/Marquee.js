@@ -21,7 +21,7 @@ const Marquee = ({ children, speed, paused }) => {
   }, [speed, paused, children]);
 
   return (
-    <div ref={marqueeRef} className="marquee-container">
+    <div ref={marqueeRef} className="flex flex-nowrap overflow-x-hidden min-w-full gap-10">
       {children}
       <div></div>
     </div>
@@ -31,6 +31,7 @@ const Marquee = ({ children, speed, paused }) => {
 function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};
+
   let tl = gsap.timeline({
       repeat: config.repeat,
       paused: config.paused,
@@ -50,6 +51,7 @@ function horizontalLoop(items, config) {
     distanceToLoop,
     item,
     i;
+
   // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
   gsap.set(items, {
     xPercent: (i, el) => {
@@ -62,12 +64,14 @@ function horizontalLoop(items, config) {
     },
   });
   gsap.set(items, { x: 0 });
+
   totalWidth =
     items[length - 1].offsetLeft +
     (xPercents[length - 1] / 100) * widths[length - 1] -
     startX +
     items[length - 1].offsetWidth *
       gsap.getProperty(items[length - 1], "scaleX");
+
   for (i = 0; i < length; i++) {
     item = items[i];
     curX = (xPercents[i] / 100) * widths[i];
@@ -100,6 +104,7 @@ function horizontalLoop(items, config) {
       .add("label" + i, distanceToStart / pixelsPerSecond);
     times[i] = distanceToStart / pixelsPerSecond;
   }
+
   function toIndex(index, vars) {
     vars = vars || {};
     let newIndex = gsap.utils.wrap(0, length, index),
@@ -113,6 +118,11 @@ function horizontalLoop(items, config) {
     vars.overwrite = true;
     return tl.tweenTo(time, vars);
   }
+
+  // Repeat and yoyo for infinite looping in both directions
+  tl.repeat(-1);
+  //   tl.yoyo(true);
+
   tl.next = (vars) => toIndex(curIndex + 1, vars);
   tl.previous = (vars) => toIndex(curIndex - 1, vars);
   tl.current = () => curIndex;

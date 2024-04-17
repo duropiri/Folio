@@ -4,7 +4,7 @@ export const TechStack = () => {
   return (
     <div
       id="tech-stack-slider"
-      className="whitespace-nowrap infinity-carousel flex flex-row gap-[50px] select-none"
+      className="whitespace-nowrap  flex flex-row gap-[50px] select-none"
     >
       {/* Programming languages */}
       <div className="flex flex-col gap-[10px]">
