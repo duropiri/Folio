@@ -106,7 +106,13 @@ const WhatIDo = () => {
           <div className="end-to-end flex flex-row overflow-hidden gap-[50px] h-full relative">
             {/* <div class="absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
 
-            <Marquee>
+            <ScrollingBanner
+              baseVelocity={-2000}
+              bannerStyles="relative m-0 flex h-24 flex-nowrap items-center overflow-hidden whitespace-nowrap lg:h-36"
+              childStyles="font-khand font-bold flex flex-row flex-nowrap items-center whitespace-nowrap text-[100px] uppercase text-dark-text dark:text-light-text lg:text-[150px]"
+              innerChildStyles="flex gap-[20px] mx-4"
+              length={5}
+            >
               {/* Programming languages */}
               <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
@@ -211,7 +217,7 @@ const WhatIDo = () => {
                   </li>
                 </ul>
               </div>
-            </Marquee>
+            </ScrollingBanner>
             {/* <div class="absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
           </div>
         </div>

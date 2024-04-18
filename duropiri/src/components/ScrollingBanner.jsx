@@ -12,7 +12,14 @@ import {
 
 import { useRef } from "react";
 
-export default function ScrollingBanner({ children, baseVelocity = 300 }) {
+export default function ScrollingBanner({
+  children,
+  baseVelocity = 300,
+  bannerStyles = "relative m-0 flex h-24 flex-nowrap items-center overflow-hidden whitespace-nowrap bg-dark-background dark:bg-light-background lg:h-36",
+  childStyles = "font-khand font-bold flex flex-row flex-nowrap items-center whitespace-nowrap text-[100px] uppercase text-dark-text dark:text-light-text lg:text-[150px]",
+  innerChildStyles = "mx-4",
+  length = 180,
+}) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -43,15 +50,15 @@ export default function ScrollingBanner({ children, baseVelocity = 300 }) {
   });
 
   return (
-    <div className="relative m-0 flex h-24 flex-nowrap items-center overflow-hidden whitespace-nowrap bg-dark-background dark:bg-light-background lg:h-36">
+    <div className={bannerStyles}>
       <motion.div
         style={{
           x,
         }}
-        className="font-khand font-bold flex flex-row flex-nowrap items-center whitespace-nowrap text-[100px] uppercase text-dark-text dark:text-light-text lg:text-[150px]"
+        className={childStyles}
       >
-        {Array.from({ length: 180 }).map((_, index) => (
-          <span className="mx-4" key={index}>
+        {Array.from({ length: length }).map((_, index) => (
+          <span className={innerChildStyles} key={index}>
             {children}
           </span>
         ))}
