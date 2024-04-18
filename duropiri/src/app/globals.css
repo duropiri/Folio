@@ -1,5 +1,5 @@
-@import url("/duropiri/public/fonts/Khand/WEB/css/khand.css");
-@import url("/duropiri/public/fonts/GeneralSans/WEB/css/general-sans.css");
+@import url("../../public/fonts/Khand/WEB/css/khand.css");
+@import url("../../public/fonts/GeneralSans/WEB/css/general-sans.css");
 
 @tailwind base;
 @tailwind components;

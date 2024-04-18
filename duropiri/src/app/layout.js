@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             <div className="hidden xl:block">
               <CustomCursor />
             </div>
-            {/* <div className="texture-overlay"></div> */}
+            <div className="texture-overlay"></div>
             <div className="flex flex-col">
               <SmoothScrolling>{children}</SmoothScrolling>
             </div>
