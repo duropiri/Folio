@@ -8,9 +8,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title:
-    "Durotimi Duro-Pirisola | Full-Stack Developer, UI/UX Designer & Content Producer",
+    "Duro Pirisola | Full-Stack Developer, UI/UX Designer & Content Producer",
   description:
-    "Discover the innovative world of Durotimi Duro-Pirisola, a seasoned Full-Stack Developer, UI/UX Designer, and Content Producer with a passion for creating seamless digital experiences. Explore a portfolio that blends functionality with aesthetics, and learn how Durotimi's expertise can elevate your next project.",
+    "Discover the innovative world of Duro Pirisola, a seasoned Full-Stack Developer, UI/UX Designer, and Content Producer with a passion for creating seamless digital experiences. Explore a portfolio that blends functionality with aesthetics, and learn how Durotimi's expertise can elevate your next project.",
   icons: {
     icon: "/icon.ico",
   },
