@@ -8,10 +8,15 @@ const Works = () => {
       <div className="flex flex-col justify-start z-10 gap-[10px]">
         <div className="end-to-end w-screen">
           {/* <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
-          <ScrollingBanner baseVelocity={-100}>Works.</ScrollingBanner>
+          <ScrollingBanner
+            baseVelocity={-100}
+            banner="h-24 lg:h-36"
+            child="font-khand font-bold text-[100px] uppercase text-light-text dark:text-dark-text lg:text-[150px]"
+          >
+            Works.{" "}
+          </ScrollingBanner>
           {/* <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
         </div>
-
 
         <div className="flex flex-col">
           {/* <div className="w-full h-[2px] bg-light-background dark:bg-light-background"></div> */}

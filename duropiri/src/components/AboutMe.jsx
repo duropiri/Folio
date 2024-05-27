@@ -8,7 +8,13 @@ const AboutMe = () => {
       <div className="relative">
         <div className="end-to-end w-screen">
           <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-light-primary dark:to-light-primary z-10"></div>
-          <ScrollingBanner baseVelocity={-100}>About.</ScrollingBanner>
+          <ScrollingBanner
+            baseVelocity={-100}
+            banner="bg-dark-background dark:bg-light-background h-24 lg:h-36"
+            child="font-khand font-bold text-[100px] uppercase text-dark-text dark:text-light-text lg:text-[150px]"
+          >
+            About.
+          </ScrollingBanner>
           <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-light-primary dark:to-light-primary z-10"></div>
         </div>
         {/* Title */}

@@ -9,17 +9,27 @@ import {
   useVelocity,
   wrap,
 } from "framer-motion";
+import React, { useRef, useState } from "react";
 
-import { useRef } from "react";
+interface ScrollingBannerProps {
+  children: React.ReactNode;
+  baseVelocity?: number;
+  length?: number;
+  banner?: string;
+  child?: string;
+  innerChild?: string;
+  slowOnHover?: boolean;
+}
 
 export default function ScrollingBanner({
   children,
   baseVelocity = 300,
-  bannerStyles = "relative m-0 flex h-24 flex-nowrap items-center overflow-hidden whitespace-nowrap bg-dark-background dark:bg-light-background lg:h-36",
-  childStyles = "font-khand font-bold flex flex-row flex-nowrap items-center whitespace-nowrap text-[100px] uppercase text-dark-text dark:text-light-text lg:text-[150px]",
-  innerChildStyles = "mx-4",
   length = 180,
-}) {
+  banner,
+  child,
+  innerChild,
+  slowOnHover = false,
+}: ScrollingBannerProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -31,12 +41,17 @@ export default function ScrollingBanner({
     clamp: false,
   });
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const adjustedBaseVelocity =
+    slowOnHover && isHovered ? baseVelocity / 3 : baseVelocity;
+
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef(1);
   useAnimationFrame((t, delta) => {
     let moveBy =
-      directionFactor.current * (baseVelocity / 1000) * (delta / 1000);
+      directionFactor.current * (adjustedBaseVelocity  / 1000) * (delta / 1000);
 
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;
@@ -49,16 +64,27 @@ export default function ScrollingBanner({
     baseX.set(baseX.get() + moveBy);
   });
 
+  const styles = {
+    banner:
+      " relative m-0 flex flex-nowrap items-center overflow-hidden whitespace-nowrap",
+    child: " flex flex-row flex-nowrap items-center whitespace-nowrap",
+    innerChild: " mx-4",
+  };
+
   return (
-    <div className={bannerStyles}>
+    <div
+      className={banner + styles.banner}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <motion.div
         style={{
           x,
         }}
-        className={childStyles}
+        className={child + styles.child}
       >
-        {Array.from({ length: length }).map((_, index) => (
-          <span className={innerChildStyles} key={index}>
+        {Array.from({ length }).map((_, index) => (
+          <span className={innerChild + styles.innerChild} key={index}>
             {children}
           </span>
         ))}

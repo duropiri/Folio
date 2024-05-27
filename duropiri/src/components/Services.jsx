@@ -11,7 +11,14 @@ const WhatIDo = () => {
       <div className="flex flex-col justify-start gap-[50px] xl:gap-[100px] z-10">
         <div className="end-to-end w-screen">
           {/* <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
-          <ScrollingBanner baseVelocity={-100}>Services.</ScrollingBanner>
+          <ScrollingBanner
+            baseVelocity={-100}
+            banner="h-24 lg:h-36"
+            child="font-khand font-bold text-[100px] uppercase text-light-text dark:text-dark-text lg:text-[150px]"
+          >
+            Services.{" "}
+          </ScrollingBanner>
+          {/* <InfiniteTextOnScroll>Services. Services. </InfiniteTextOnScroll> */}
           {/* <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
         </div>
         <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[25px]">
@@ -108,10 +115,11 @@ const WhatIDo = () => {
 
             <ScrollingBanner
               baseVelocity={-2000}
-              bannerStyles="relative m-0 flex h-24 flex-nowrap items-center overflow-hidden whitespace-nowrap lg:h-36"
-              childStyles="font-khand font-bold flex flex-row flex-nowrap items-center whitespace-nowrap text-[100px] uppercase text-dark-text dark:text-light-text lg:text-[150px]"
-              innerChildStyles="flex gap-[20px] mx-4"
+              banner="relative m-0 flex h-24 flex-nowrap items-center overflow-hidden whitespace-nowrap lg:h-36"
+              child="font-khand font-bold flex flex-row flex-nowrap items-center whitespace-nowrap text-[100px] uppercase text-dark-text dark:text-light-text lg:text-[150px]"
+              innerChild="flex gap-[20px] mx-4"
               length={5}
+              slowOnHover={true}
             >
               {/* Programming languages */}
               <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">

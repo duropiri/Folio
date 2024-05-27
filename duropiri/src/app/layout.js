@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <body className="dark">
           <SpeedInsights />
           <>
-            <div className="hidden xl:block">
+            <div className="hidden xl:block z-[999]">
               <CustomCursor />
             </div>
             <div className="texture-overlay"></div>

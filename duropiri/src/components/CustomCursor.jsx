@@ -94,7 +94,7 @@ export default function CustomCursor() {
     <div
       ref={cursorRef}
       className="fixed w-6 h-6 rounded-full bg-light-accent dark:bg-dark-accent pointer-events-none flex items-center justify-center"
-      style={{ zIndex: 0 }}
+      style={{ zIndex: 999 }}
     >
       <span
         ref={followerTextRef}
