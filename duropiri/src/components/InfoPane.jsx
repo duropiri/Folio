@@ -213,7 +213,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                 </li>
                 <li>
                   <span className="font-medium">
-                    <CurrentTime /> GMT-7
+                    <CurrentTime /> GMT-6
                   </span>
                 </li>
               </ul>
