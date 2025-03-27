@@ -1,8 +1,9 @@
 import React from "react";
-import { TechStack } from "./TechStack";
-import ScrambleText from "./ScrambleText";
-import Marquee from "./Marquee";
-import ScrollingBanner from "./ScrollingBanner";
+import { TechStack } from "@/components/ui/TechStack";
+import ScrambleText from "@/components/ui/ScrambleText";
+// import Marquee from "./Marquee";
+import ScrollingBanner from "@/components/ui/ScrollingBanner";
+import Marquee from "react-fast-marquee";
 
 const WhatIDo = () => {
   return (
@@ -112,7 +113,7 @@ const WhatIDo = () => {
 
           <div className="end-to-end flex flex-row overflow-hidden gap-[50px] h-full relative">
             {/* <div class="absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
-
+            {/* 
             <ScrollingBanner
               baseVelocity={-2000}
               banner="relative m-0 flex h-24 flex-nowrap items-center overflow-hidden whitespace-nowrap lg:h-36"
@@ -120,9 +121,10 @@ const WhatIDo = () => {
               innerChild="flex gap-[20px] mx-4"
               length={5}
               slowOnHover={true}
-            >
+            > */}
+            <Marquee pauseOnHover autoFill className="w-full">
               {/* Programming languages */}
-              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
+              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap pr-12">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
                   Programming Languages.
                 </p>
@@ -139,7 +141,7 @@ const WhatIDo = () => {
                 </ul>
               </div>
               {/* Frontend technologies */}
-              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
+              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap pr-12">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
                   Frontend Technologies.
                 </p>
@@ -165,7 +167,7 @@ const WhatIDo = () => {
                 </ul>
               </div>
               {/* Backend technologies */}
-              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
+              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap pr-12">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
                   Backend Technologies.
                 </p>
@@ -179,7 +181,7 @@ const WhatIDo = () => {
                 </ul>
               </div>
               {/* DBMS */}
-              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
+              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap pr-12">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
                   DBMS.
                 </p>
@@ -190,7 +192,7 @@ const WhatIDo = () => {
                 </ul>
               </div>
               {/* DevOps and Cloud */}
-              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
+              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap pr-12">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
                   DevOps and Cloud.
                 </p>
@@ -204,7 +206,7 @@ const WhatIDo = () => {
                 </ul>
               </div>
               {/* Version Control */}
-              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
+              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap pr-12">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
                   Version Control.
                 </p>
@@ -215,7 +217,7 @@ const WhatIDo = () => {
                 </ul>
               </div>
               {/* Other */}
-              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap">
+              <div className="flex flex-col gap-[10px] w-full h-full whitespace-nowrap pr-12">
                 <p className="text-[16px] font-semibold text-dark-background dark:text-light-background w-full">
                   Other.
                 </p>
@@ -225,7 +227,8 @@ const WhatIDo = () => {
                   </li>
                 </ul>
               </div>
-            </ScrollingBanner>
+            </Marquee>
+            {/* </ScrollingBanner> */}
             {/* <div class="absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
           </div>
         </div>

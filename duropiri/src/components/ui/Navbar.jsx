@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Logo from "@/components/Logo";
-import InfoPane from "@/components/InfoPane";
-import Menu from "@/components/Menu";
+import Logo from "@/components/ui/Logo";
+import InfoPane from "@/components/ui/InfoPane";
+import Menu from "@/components/ui/Menu";
 import GsapMagnetic from "./GsapMagnetic";
 
 const Navbar = () => {

@@ -1,7 +1,7 @@
 // components/Footer.jsx
 "use client";
-import GsapMagnetic from "./GsapMagnetic";
-import InfoPane from "./InfoPane";
+import GsapMagnetic from "@/components/ui/GsapMagnetic";
+import InfoPane from "@/components/ui/InfoPane";
 
 const Footer = () => {
   return (
@@ -20,28 +20,69 @@ const Footer = () => {
       </div>
       <GsapMagnetic>
         <div
-          className="followerchangetest"
+          className="followerchangetest cursor-pointer group/button bg-dark-primary/10 flex items-center justify-center size-[5rem] rounded-full overflow-hidden"
           onClick={() =>
             document
               .getElementById("home")
               .scrollIntoView({ behavior: "smooth" })
           }
         >
-          <svg
-            width="50"
-            height="28.29"
-            viewBox="0 0 50 28.29"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-[28.29px] text-light-primary dark:text-dark-primary"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M23.4211 1.51126C24.2932 0.639167 25.7069 0.639168 26.579 1.51126L49.346 24.2783C50.218 25.1504 50.218 26.5641 49.346 27.4362L48.2932 28.489C47.4212 29.3611 46.0073 29.3611 45.1352 28.489L25 8.35373L4.86477 28.489C3.99268 29.3611 2.57899 29.3611 1.70689 28.489L0.654072 27.4362C-0.218021 26.5641 -0.218021 25.1504 0.654072 24.2783L23.4211 1.51126Z"
-              fill="currentColor"
-            />
-          </svg>
+          <span className="relative flex overflow-hidden pointer-events-none">
+            {/* Placeholder for spacing */}
+            <span className="opacity-0 bg-dark-primary/10 flex items-center justify-center size-[5rem] rounded-full">
+              <svg
+                width="50"
+                height="28.29"
+                viewBox="0 0 50 28.29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-[28.29px] text-light-primary dark:text-dark-primary"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M23.4211 1.51126C24.2932 0.639167 25.7069 0.639168 26.579 1.51126L49.346 24.2783C50.218 25.1504 50.218 26.5641 49.346 27.4362L48.2932 28.489C47.4212 29.3611 46.0073 29.3611 45.1352 28.489L25 8.35373L4.86477 28.489C3.99268 29.3611 2.57899 29.3611 1.70689 28.489L0.654072 27.4362C-0.218021 26.5641 -0.218021 25.1504 0.654072 24.2783L23.4211 1.51126Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+
+            {/* Animated content */}
+            <span className="absolute w-full h-full left-1/2 -translate-x-1/2 translate-y-0 group-hover/button:-translate-y-[100%] group-hover/button:opacity-50 transition-all duration-300 flex items-center justify-center size-[5rem] rounded-full">
+              <svg
+                width="50"
+                height="28.29"
+                viewBox="0 0 50 28.29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-[28.29px] text-light-primary dark:text-dark-primary"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M23.4211 1.51126C24.2932 0.639167 25.7069 0.639168 26.579 1.51126L49.346 24.2783C50.218 25.1504 50.218 26.5641 49.346 27.4362L48.2932 28.489C47.4212 29.3611 46.0073 29.3611 45.1352 28.489L25 8.35373L4.86477 28.489C3.99268 29.3611 2.57899 29.3611 1.70689 28.489L0.654072 27.4362C-0.218021 26.5641 -0.218021 25.1504 0.654072 24.2783L23.4211 1.51126Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <span className="absolute w-full h-full left-1/2 -translate-x-1/2 opacity-50 translate-y-[100%] group-hover/button:-translate-y-0 group-hover/button:opacity-100 transition-all duration-300 flex items-center justify-center size-[5rem] rounded-full">
+              <svg
+                width="50"
+                height="28.29"
+                viewBox="0 0 50 28.29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-[28.29px] text-light-primary dark:text-dark-primary"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M23.4211 1.51126C24.2932 0.639167 25.7069 0.639168 26.579 1.51126L49.346 24.2783C50.218 25.1504 50.218 26.5641 49.346 27.4362L48.2932 28.489C47.4212 29.3611 46.0073 29.3611 45.1352 28.489L25 8.35373L4.86477 28.489C3.99268 29.3611 2.57899 29.3611 1.70689 28.489L0.654072 27.4362C-0.218021 26.5641 -0.218021 25.1504 0.654072 24.2783L23.4211 1.51126Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </GsapMagnetic>
     </div>

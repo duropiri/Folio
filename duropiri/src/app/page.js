@@ -1,13 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import gsap from "gsap";
+// import gsap from "gsap";
 
 import Hero from "@/components/Hero";
 import Body from "@/components/Body";
 import Contact from "@/components/Contact";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/ui/Navbar";
 
-import SplashScreen from "@/components/SplashScreen";
+import SplashScreen from "@/components/ui/SplashScreen";
 import { usePathname } from "next/navigation";
 
 export default function Home() {

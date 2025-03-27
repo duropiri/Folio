@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { ScrollTriggeredAnimation } from "./ScrollTriggeredAnimation";
-import { useTheme } from "@/components/ThemeContext";
+import React from "react";
+import { ScrollTriggeredAnimation } from "@/components/ui/ScrollTriggeredAnimation";
+import { useTheme } from "@/components/ui/ThemeContext";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const { navbarHeight } = useTheme();
 
   return (
@@ -25,23 +25,23 @@ const Hero = () => {
                 x2="0%"
                 y2="80%"
               >
-                <stop offset="0%" stop-color="currentColor" stop-opacity="1" />
+                <stop offset="0%" stopColor="currentColor" stopOpacity="1" />
                 <stop
                   offset="0%"
-                  stop-color="currentColor"
-                  stop-opacity="0.7"
+                  stopColor="currentColor"
+                  stopOpacity="0.7"
                 />
                 <stop
                   offset="20%"
-                  stop-color="currentColor"
-                  stop-opacity="0.5"
+                  stopColor="currentColor"
+                  stopOpacity="0.5"
                 />
                 <stop
                   offset="40%"
-                  stop-color="currentColor"
-                  stop-opacity="0.3"
+                  stopColor="currentColor"
+                  stopOpacity="0.3"
                 />
-                <stop offset="80%" stop-color="currentColor" stop-opacity="0" />
+                <stop offset="80%" stopColor="currentColor" stopOpacity="0" />
               </linearGradient>
             </defs>
             <ellipse
@@ -79,8 +79,8 @@ const Hero = () => {
           </ul>
           {/* Description */}
           <p className="font-medium body-text text-light-primary dark:text-dark-primary leading-snug lg:w-4/5 max-w-[50ch]">
-            A <span class="font-bold underline">Full Stack Developer</span>{" "}&{" "}
-            <span class="font-bold underline">Marketing Specialist</span> helping business owners leverage proven,
+            A <span className="font-bold underline">Full Stack Developer</span>{" "}&{" "}
+            <span className="font-bold underline">Marketing Specialist</span> helping business owners leverage proven,
             results-driven systems.
           </p>
         </div>
@@ -89,4 +89,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero; 

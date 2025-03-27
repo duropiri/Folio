@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Logo from "./Logo";
+import Logo from "@/components/ui/Logo";
 
 const SplashScreen = ({ finishLoading }) => {
   const circleRef = useRef(null);

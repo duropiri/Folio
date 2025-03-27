@@ -35,6 +35,16 @@ module.exports = {
       textStrokeColor: (theme) => ({
         primary: theme("colors.light-primary"),
       }),
+      fontFamily: {
+  			'khand': [
+  				'Khand',
+  				'sans-serif'
+  			],
+  			'general-sans': [
+  				'GeneralSans',
+  				'sans-serif'
+  			]
+  		},
     },
   },
   plugins: [

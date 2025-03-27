@@ -233,7 +233,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
           <li>
             <a
               className="followerchangetest"
-              href="https://www.instagram.com/duropiri/?hl=en"
+              href="https://www.instagram.com/duro.dp/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
             >

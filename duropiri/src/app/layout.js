@@ -1,10 +1,12 @@
 "layout.js";
 import "./globals.css";
-import SmoothScrolling from "@/components/SmoothScrolling";
-import { ThemeProvider } from "@/components/ThemeContext";
-import ThemeToggle from "@/components/Dock";
-import CustomCursor from "@/components/CustomCursor";
+import SmoothScrolling from "@/components/ui/SmoothScrolling";
+import { ThemeProvider } from "@/components/ui/ThemeContext";
+import ThemeToggle from "@/components/ui/Dock";
+import CustomCursor from "@/components/ui/CustomCursor";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { khand, generalSans } from "./fonts";
+
 
 export const metadata = {
   title:
@@ -20,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <ThemeProvider>
       <html lang="en">
-        <body className="dark">
+        <body className={`${khand.variable} ${generalSans.variable} dark`}>
           <SpeedInsights />
           <>
             <div className="hidden xl:block z-[999]">

@@ -1,6 +1,6 @@
 import React from "react";
-import { ScrollTriggeredAnimation } from "./ScrollTriggeredAnimation";
-import ScrollingBanner from "./ScrollingBanner";
+import { ScrollTriggeredAnimation } from "@/components/ui/ScrollTriggeredAnimation";
+import ScrollingBanner from "@/components/ui/ScrollingBanner";
 
 const AboutMe = () => {
   return (

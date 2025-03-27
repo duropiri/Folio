@@ -109,7 +109,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                     <GsapMagnetic>
                       <a
                         className="followerchangetest"
-                        href="https://www.instagram.com/duropiri/?hl=en"
+                        href="https://www.instagram.com/duro.dp/?hl=en"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -148,8 +148,9 @@ const InfoPane = ({ all, dropdown, time }) => {
                   </li>
 
                   <li>
+                    
                     <span className="text-field-hover">
-                      duro.dp02@gmail.com
+                      <a href="mailto:duro.dp02@gmail.com">duro.dp02@gmail.com</a>
                     </span>
                   </li>
                 </ul>
