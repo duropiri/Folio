@@ -77,7 +77,7 @@ const Works: React.FC = () => {
                   className="block"
                 >
                   <figure
-                    className="flex relative group h-44 w-full overflow-hidden followerchangetest gap-4"
+                    className="flex relative group h-44 w-full overflow-hidden pointerchangehover gap-4"
                     data-follower-text="View"
                     data-scale={3}
                   >
@@ -119,7 +119,7 @@ const Works: React.FC = () => {
           <div className="p-6">
             <button 
               onClick={() => window.open('https://github.com/duropiri', '_blank')}
-              className="followerchangetest btn btn-link no-underline transition-all transform hover:underline-offset-4 duration-300 text-[18px] lg:text-[24px] font-medium text-dark-background dark:text-light-background"
+              className="pointerchangehover btn btn-link no-underline transition-all transform hover:underline-offset-4 duration-300 text-[18px] lg:text-[24px] font-medium text-dark-background dark:text-light-background"
             >
               <ScrambleText text="View More" />
             </button>

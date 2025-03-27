@@ -10,6 +10,7 @@ const WhatIDo = () => {
     <div className="relative w-full h-full">
       {/* Content */}
       <div className="flex flex-col justify-start gap-[50px] xl:gap-[100px] z-10">
+        {/* Header */}
         <div className="end-to-end w-screen">
           {/* <div class="end-to-end absolute h-[100%] top-0 left-0 w-52 bg-gradient-to-l from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
           <ScrollingBanner
@@ -22,11 +23,16 @@ const WhatIDo = () => {
           {/* <InfiniteTextOnScroll>Services. Services. </InfiniteTextOnScroll> */}
           {/* <div class="end-to-end absolute h-[100%] top-0 right-0 w-52 bg-gradient-to-r from-transparent to-dark-primary dark:to-light-primary z-10"></div> */}
         </div>
-        <div className="flex flex-col xl:flex-row gap-[10px] xl:gap-[25px]">
+
+        {/* Body */}
+        <div className="z-[999] flex flex-col xl:flex-row gap-[10px] xl:gap-[25px]">
           {/* Title & Description */}
           <div className="flex flex-col w-full xl:w-1/2">
             <p className="body-text items-start flex justify-start w-full relative max-w-[40ch] text-dark-background dark:text-light-background pt-[25px]">
-              <span aria-hidden="true">
+              <span
+                className="cursor-default pointerlargehover"
+                aria-hidden="true"
+              >
                 My obsession is to deliver a digital experience that not only
                 serves a great purpose, but give your business an unfair
                 advantage. Empowering all-scale startups with custom web
@@ -45,7 +51,7 @@ const WhatIDo = () => {
                 type="radio"
                 name="my-accordion-3"
                 defaultChecked
-                className="followerchangetest"
+                className="pointerchangehover"
               />
               <div className="collapse-title text-[32px] lg:text-[48px] font-medium text-dark-background dark:text-light-background">
                 <ScrambleText text="Web Development" />
@@ -64,7 +70,7 @@ const WhatIDo = () => {
               <input
                 type="radio"
                 name="my-accordion-3"
-                className="followerchangetest"
+                className="pointerchangehover"
               />
               <div className="collapse-title text-[32px] lg:text-[48px] font-medium text-dark-background dark:text-light-background">
                 <ScrambleText text="Web Design" />
@@ -82,7 +88,7 @@ const WhatIDo = () => {
               <input
                 type="radio"
                 name="my-accordion-3"
-                className="followerchangetest"
+                className="pointerchangehover"
               />
               <div className="collapse-title text-[32px] lg:text-[48px] font-medium text-dark-background dark:text-light-background">
                 <ScrambleText text="SEO & Marketing" />
@@ -97,6 +103,7 @@ const WhatIDo = () => {
             </div>
           </div>
         </div>
+
         {/* Tech Stack */}
         <div className="flex flex-col w-full">
           <div className="flex justify-center">

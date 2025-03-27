@@ -61,9 +61,9 @@ const Hero: React.FC = () => {
         fade={0}
         offset={`top-=${navbarHeight}`}
       >
-        <div className="flex flex-col h-full justify-center gap-y-3 sm:gap-y-8 items-start sm:items-start">
+        <div className="flex flex-col h-full justify-center gap-y-3 sm:gap-y-8 items-start sm:items-start cursor-default">
           {/* Title */}
-          <ul className="font-khand hero-text whitespace-nowrap duration-500">
+          <ul className="font-khand hero-text whitespace-nowrap duration-500 pointerlargehover">
             <li className="text-light-primary dark:text-dark-primary">
               <span className="text-stroke-1 sm:text-stroke-2 lg:text-stroke-3 xl:text-stroke-4 text-stroke-light-primary dark:text-stroke-dark-primary text-transparent">
                 Duro
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
           {/* Description */}
           <p className="font-medium body-text text-light-primary dark:text-dark-primary leading-snug lg:w-4/5 max-w-[50ch]">
             A <span className="font-bold underline">Full Stack Developer</span>{" "}&{" "}
-            <span className="font-bold underline">Marketing Specialist</span> helping business owners leverage proven,
+            <span className="font-bold underline">Digital Growth Specialist</span> helping business owners leverage proven,
             results-driven systems.
           </p>
         </div>

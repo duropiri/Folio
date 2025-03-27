@@ -32,7 +32,7 @@ export default function CustomCursor() {
     ); // Hide cursor on mouse leave
 
     // Hover over elements that change the cursor (scale)
-    document.querySelectorAll(".followerchangetest").forEach((el) => {
+    document.querySelectorAll(".pointerchangehover").forEach((el) => {
       el.addEventListener("mouseenter", () => {
         const text = el.getAttribute("data-follower-text") || ""; // Fallback text
         const scale = el.getAttribute("data-scale") || 1.5; // Default scale or custom
@@ -53,6 +53,33 @@ export default function CustomCursor() {
           ease: "power3.out",
           autoAlpha: 1,
           duration: 0.2,
+          overwrite: "auto",
+        });
+      });
+    });
+
+    // Hover over elements that change the cursor (scale)
+    document.querySelectorAll(".pointerlargehover").forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+        const text = el.getAttribute("data-follower-text") || ""; // Fallback text
+        const scale = el.getAttribute("data-scale") || 20; // Default scale or custom
+        followerTextRef.current.innerHTML = text; // Set text
+        gsap.to(cursorRef.current, {
+          scale: parseFloat(scale), // Use the custom scale
+          ease: "power3.out",
+          autoAlpha: 0.5,
+          duration: 0.5,
+          overwrite: "auto",
+        });
+      });
+
+      el.addEventListener("mouseleave", () => {
+        followerTextRef.current.innerHTML = ""; // Clear text
+        gsap.to(cursorRef.current, {
+          scale: 1, // Revert to original size
+          ease: "power3.out",
+          autoAlpha: 1,
+          duration: 0.5,
           overwrite: "auto",
         });
       });
@@ -94,7 +121,7 @@ export default function CustomCursor() {
     <div
       ref={cursorRef}
       className="fixed w-6 h-6 rounded-full bg-light-accent dark:bg-dark-accent pointer-events-none flex items-center justify-center"
-      style={{ zIndex: 999 }}
+      style={{ zIndex: 99 }}
     >
       <span
         ref={followerTextRef}

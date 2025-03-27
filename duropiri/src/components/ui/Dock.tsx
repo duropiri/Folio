@@ -51,7 +51,7 @@ export default function ThemeToggle(): JSX.Element {
       <div className="rounded-lg xl:opacity-25 hover:opacity-100 transition-opacity">
         <div className="px-2.5 rounded-md bg-dark-background dark:bg-light-background outline-none inline-flex items-center gap-4 m-1">
           <GsapMagnetic>
-            <label className="swap swap-rotate followerchangetest">
+            <label className="swap swap-rotate pointerchangehover">
               <input type="checkbox" onClick={toggleTheme} />
 
               {/* sun icon */}
@@ -78,7 +78,7 @@ export default function ThemeToggle(): JSX.Element {
               <GsapMagnetic key={item.id}>
                 <li className="group/button font-semibold text-dark-primary dark:text-light-primary p-2.5">
                   <a
-                    className="followerchangetest"
+                    className="pointerchangehover cursor-pointer"
                     onClick={() => {
                       if (item.id === "contact") {
                         item.scrollTo(null);

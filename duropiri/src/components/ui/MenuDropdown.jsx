@@ -158,7 +158,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
 
       {/* Social Media SVGs */}
       <div className="flex flex-row w-full h-[32px] justify-between mt-6">
-        <label className="swap swap-rotate followerchangetest w-1/2 justify-start">
+        <label className="swap swap-rotate pointerchangehover w-1/2 justify-start">
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" onClick={toggleTheme} />
 
@@ -184,7 +184,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
           {/* LinkedIn */}
           <li>
             <a
-              className="followerchangetest"
+              className="pointerchangehover"
               href="https://www.linkedin.com/in/duropiri/"
               target="_blank"
               rel="noopener noreferrer"
@@ -209,7 +209,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
           {/* Facebook */}
           <li>
             <a
-              className="followerchangetest"
+              className="pointerchangehover"
               href="https://www.facebook.com/durodp/"
               target="_blank"
               rel="noopener noreferrer"
@@ -232,7 +232,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
           {/* Instagram */}
           <li>
             <a
-              className="followerchangetest"
+              className="pointerchangehover"
               href="https://www.instagram.com/duro.dp/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
@@ -257,7 +257,7 @@ const MenuDropdown = ({ onClose, isOpen }) => {
           {/* Twitter (X) */}
           <li>
             <a
-              className="followerchangetest"
+              className="pointerchangehover"
               href="https://www.example.com"
               target="_blank"
               rel="noopener noreferrer"

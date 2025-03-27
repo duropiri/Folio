@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
                         {navigationItems.map((item) => (
                           <li key={item.id} className="text-[16px] text-light-primary dark:text-dark-primary">
                             <a
-                              className="followerchangetest cursor-pointer"
+                              className="pointerchangehover cursor-pointer"
                               onClick={() => {
                                 if (item.id === "contact") {
                                   item.scrollTo(null);
@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
-                                    className="followerchangetest"
+                                    className="pointerchangehover"
                                     href="https://www.linkedin.com/in/duropiri/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -189,7 +189,7 @@ const Contact: React.FC = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
-                                    className="followerchangetest"
+                                    className="pointerchangehover"
                                     href="https://www.facebook.com/durodp/"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -214,7 +214,7 @@ const Contact: React.FC = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
-                                    className="followerchangetest"
+                                    className="pointerchangehover"
                                     href="https://www.instagram.com/duro.dp/?hl=en"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -241,7 +241,7 @@ const Contact: React.FC = () => {
                               <GsapMagnetic>
                                 <li>
                                   <a
-                                    className="followerchangetest"
+                                    className="pointerchangehover"
                                     href="https://www.example.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -267,7 +267,7 @@ const Contact: React.FC = () => {
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
-                            className="followerchangetest"
+                            className="pointerchangehover"
                             href="https://www.example.com"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -277,7 +277,7 @@ const Contact: React.FC = () => {
                         </li>
                         <li className="text-[16px] text-light-primary dark:text-dark-primary">
                           <a
-                            className="followerchangetest"
+                            className="pointerchangehover"
                             href="https://github.com/duropiri"
                             target="_blank"
                             rel="noopener noreferrer"

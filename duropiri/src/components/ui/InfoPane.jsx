@@ -68,7 +68,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                   <li className="flex flex-row justify-end h-5 items-end gap-2">
                     <GsapMagnetic>
                       <a
-                        className="followerchangetest"
+                        className="pointerchangehover"
                         href="https://www.linkedin.com/in/duropiri/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -88,7 +88,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                     {/* Facebook */}
                     <GsapMagnetic>
                       <a
-                        className="followerchangetest"
+                        className="pointerchangehover"
                         href="https://www.facebook.com/durodp/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -108,7 +108,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                     {/* Instagram */}
                     <GsapMagnetic>
                       <a
-                        className="followerchangetest"
+                        className="pointerchangehover"
                         href="https://www.instagram.com/duro.dp/?hl=en"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -128,7 +128,7 @@ const InfoPane = ({ all, dropdown, time }) => {
                     {/* Twitter (X) */}
                     <GsapMagnetic>
                       <a
-                        className="followerchangetest"
+                        className="pointerchangehover"
                         href="https://www.example.com"
                         target="_blank"
                         rel="noopener noreferrer"
